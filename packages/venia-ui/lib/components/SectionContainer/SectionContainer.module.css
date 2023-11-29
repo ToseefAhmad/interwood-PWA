@@ -1,0 +1,97 @@
+/* DESIGN FOR MOBILE */
+
+.section-container {
+    margin: 1rem 0 0;
+    width: 100vw;
+    margin-left: calc(((100vw - (100% - 1px)) / 2) * (-1));
+    /* max-width: fit-content; */
+}
+
+
+.section-container [data-element='new_arrival_image'],
+.section-container [data-element='best_seller_image'],
+.section-container [data-element='decor_image'],
+.section-container [data-element='kids_furniture_image'],
+.section-container [data-element='wedding_furniture_image'],
+.section-container [data-element='kids_furniture_image'],
+.section-container [data-element='winter_sale_image'],
+.section-container [data-element='study_furniture_image'],
+.section-container [data-element='kitchen_furniture_image'],
+.section-container [data-element='desktop_workstations_image'],
+.section-container [data-element='second-new_arrival_image'] {
+    margin: 1.3rem auto;
+}
+
+.section-container [data-element="mobile_new_arrival_image"],
+.section-container [data-element="mobile_best_seller_image"],
+.section-container [data-element="mobile_decor_image"],
+.section-container [data-element="mobile_kids_furniture_image"],
+.section-container [data-element="mobile_wedding_furniture_image"],
+.section-container [data-element="mobile_winter_sale_image"],
+.section-container [data-element="mobile_study_furniture_image"],
+.section-container [data-element="mobile_kitchen_furniture_image"],
+.section-container [data-element="mobile_kitchen_furniture_image"],
+.section-container [data-element="mobile_desktop_workstations_image"],
+.section-container [data-element="second-mobile_new_arrival_image"] {
+    margin: 1rem auto;
+}
+
+
+.section-container [data-element="mobile_decor_image"],
+.section-container [data-element="mobile_kids_furniture_image"],
+.section-container [data-element="mobile_winter_sale_image"],
+.section-container [data-element="mobile_study_furniture_image"] {
+    margin: 0;
+}
+
+
+.section-container [data-element='decor_image'],
+.section-container [data-element='kids_furniture_image'],
+.section-container [data-element="winter_sale_image"],
+.section-container [data-element="study_furniture_image"] {
+    margin: 0;
+}
+
+/* DESIGN FOR DESKTOP */
+/* DESKTOP FIRST APPROACH */
+
+@media screen and (min-width:990px) {
+    .section-container {
+        margin-left: calc(((100vw - (100% - 15px)) / 2) * (-1));
+    }
+}
+
+
+@media screen and (min-width:1400px) {
+    .section-container {
+        margin-left: calc(((100vw - (100% - 15px)) / 2) * (-1));
+    }
+}
+
+.section-container [data-element="desktop_kids_and_decor_block"] {
+    display: flex;
+    /* grid-template-columns: 1fr 1fr; */
+    gap: 2rem;
+    width: 95vw;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.section-container [data-element="desktop_winter_sale_and_study_furniture_block"] {
+    display: flex;
+    /* grid-template-columns: 1fr 1fr; */
+    gap: 2rem;
+    width: 95vw;
+    justify-content: space-between;
+    margin: auto;
+}
+
+@media screen and (max-width:500px) {
+
+    .section-container [data-element="mobile_winter_sale_and_study_furniture_block"],
+    .section-container [data-element="mobile_kids_and_decor_block"] {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

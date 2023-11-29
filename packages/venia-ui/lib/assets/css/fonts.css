@@ -1,0 +1,80 @@
+@font-face {
+    font-family: 'Nexa-Thin';
+    src: url('../fonts/Nexa-Thin.woff2') format('woff2'),
+    url('../fonts/Nexa-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nexa-Book';
+    src: url('../fonts/Nexa-Book.woff2') format('woff2'),
+    url('../fonts/Nexa-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nexa-Black';
+    src: url('../fonts/Nexa-Black.woff2') format('woff2'),
+    url('../fonts/Nexa-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nexa-Heavy';
+    src: url('../fonts/Nexa-Heavy.woff2') format('woff2'),
+    url('../fonts/Nexa-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nexa-XBold';
+    src: url('../fonts/Nexa-XBold.woff2') format('woff2'),
+    url('../fonts/Nexa-XBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nexa-Bold';
+    src: url('../fonts/Nexa-Bold.woff2') format('woff2'),
+    url('../fonts/Nexa-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nexa-Regular';
+    src: url('../fonts/Nexa-Regular.woff2') format('woff2'),
+    url('../fonts/Nexa-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nexa-Light';
+    src: url('../fonts/Nexa-Light.woff2') format('woff2'),
+    url('../fonts/Nexa-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rajdhani-Medium';
+    src: url('../fonts/rajdhani-medium.woff2') format('woff2'),
+    url('../fonts/rajdhani-medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

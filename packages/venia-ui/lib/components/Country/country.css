@@ -1,0 +1,9 @@
+.root {
+    grid-area: country;
+}
+body .root select {
+    background-image: url("../../assets/img/angle-down.svg");
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
+    background-size: 22px;
+}

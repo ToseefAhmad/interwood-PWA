@@ -1,0 +1,10 @@
+.root {
+    display: grid;
+    row-gap: 0.375rem;
+}
+
+.heading {
+    font-size: 17px;
+    font-weight: 600;
+    padding-bottom: 0.375rem;
+}

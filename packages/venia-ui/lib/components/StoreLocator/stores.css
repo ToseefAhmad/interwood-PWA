@@ -1,0 +1,193 @@
+:global(.page-has-title) {
+    margin-top: 8rem;
+    margin-bottom: 2.8rem;
+}
+:global(.store-locator-area) {
+    width: 100%;
+}
+:global(.store-locator-left-block), 
+:global(.store-locator-right-block) {
+    width: 50%;
+    float: left;
+}
+:global(.store-locator-left-block) {
+    background-color: #ffffff;
+    box-shadow: 0 10px 25px #eae9e9;
+    padding: 30px 25px 30px 25px;
+    max-width: 45%;
+    max-height: 400px;
+    margin-right: 30px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+:global(.block-header) {
+    position: relative;
+    padding-bottom: 25px;
+}
+:global(.block-header:before) {
+    content: "";
+    background-color: #dddddd;
+    height: 1px;
+    width: 100vw;
+    position: absolute;
+    margin-left: calc((100vw - 100%) / 2 * (-1));bottom: 0;
+}
+:global(.block-form-group) {
+    position: relative;
+}
+:global(.block-form-group input) {
+    border: 1px solid #21B259;
+    height: 50px;
+    width: 100%;
+    color: #000;
+    padding: 12px 75px 10px 15px;
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 0.3px;
+}
+:global(.block-form-group input::placeholder) {
+    color: #a5a5a5;
+}
+:global(.block-form-group i) {
+    font-size: 25px;
+    color: #21B259;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+:global(.block-form-group:before) {
+    content: '';
+    background-color: #dddddd;
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    right: 65px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+:global(.search-content h1) {
+    color: #000;
+    font-weight: 500;
+    font-size: 25px;
+    color: #21b259;
+    text-transform: capitalize;
+    letter-spacing: 0.35px;
+    margin-bottom: 15px;
+}
+:global(.search-content) {
+    margin-top: 20px;
+}
+:global(.search-content span) {
+    display: inline-block;
+    color: #000;
+    text-transform: capitalize;
+    font-size: 16px;
+    letter-spacing: 0.35px;
+    line-height: 1.6;
+}
+:global(.head-office) {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    letter-spacing: 0.35px;
+}
+:global(.search-content ul li) {
+    padding-left: 22px;
+    position: relative;
+}
+:global(.search-content a) {
+    display: inline-block;
+    width: 100%;
+    height: 42px;
+    background-color: #ea4531;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.36px;
+    padding: 14px 10px;
+    text-align: center;
+    margin: 18px 0 30px 0;
+}
+:global(.search-content ul li .has-address:before) {
+    content: '\e826';
+    font-family: "Porto";
+    font-size: 15px;
+    color: #21b259;
+    position: absolute;
+    left: 0;
+}
+:global(.search-content ul li .contact-info:before) {
+    content: '\e80a';
+    font-family: "Porto";
+    font-size: 15px;
+    color: #21b259;
+    position: absolute;
+    left: 0;
+}
+
+
+.title{
+    margin: 0 0 15px;
+    color: #000;
+    font-family: NexaLight,sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.city-title{
+    color: #000;
+    font-family: NexaLight,sans-serif;
+    line-height: 1.2;
+    text-decoration: underline;
+    padding-left: 83px;
+    margin-top: 15px;
+}
+
+.stores-main{
+    display: block;
+}
+
+.store-name{
+    color: #1fa54c;
+}
+
+.store-data{
+    width: 50%;
+    padding-left: 270px;
+    margin: 10px;
+}
+
+.map-link
+{
+    text-decoration: none;
+    background-color: transparent;
+    color: #000;
+}
+
+.link-div{
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #000;
+}
+.schedule-title{
+    font-weight: 500;
+}
+
+@media screen and (max-width: 767px){
+    :global(.page-has-title) {
+        margin-top: 1rem;
+    }
+    :global(.store-locator-left-block), 
+    :global(.store-locator-right-block){
+        width: 100%;
+        max-width: 100%;
+    }
+    :global(.store-locator-left-block) {
+        margin-bottom: 25px;
+    }
+}
+
+

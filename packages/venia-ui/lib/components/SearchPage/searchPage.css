@@ -1,0 +1,191 @@
+.root {
+    padding: 1rem;
+}
+
+.categoryTop {
+    align-items: center;
+    color: rgb(var(--venia-global-color-text-alt));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.noResult {
+    display: flex;
+}
+
+.headerButtons {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.heading {
+    line-height: var(--venia-global-typography-heading-lineHeight);
+    margin: 2.5rem 0 1rem;
+    max-width: 75vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    margin: 110px 0 10px 0;
+    display: block;
+}
+
+.headingHighlight {
+    font-weight: var(--venia-global-fontWeight-bold);
+}
+
+.filterButton {
+    composes: root_lowPriority from '../../components/Button/button.css';
+    min-width: 6.25rem;
+}
+
+.sortContainer {
+    font-size: 0.875rem;
+}
+
+.sortText {
+    font-weight: 600;
+}
+
+
+/* Filter */
+
+section.filter-section {
+    float: left;
+    width: 100%;
+}
+
+.filter-section .filter-area {
+    float: left;
+    width: 100%;
+    padding: 0 0 15px 0;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.filter-section .filter-area ul {
+    list-style-type: none;
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-family: 'Nexa-Bold', sans-serif;
+}
+
+.filter-section .filter-area ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.filter-section .filter-area ul li a {
+    font-size: 17px;
+    padding: 8px 25px;
+    display: inline-block;
+    line-height: 30px;
+    font-weight: 500;
+    text-align: center;
+    height: 45px;
+    cursor: pointer;
+}
+.filter-section .filter-area ul li a:hover, 
+.filter-section .filter-area ul li.active a
+{
+    background-color: #21b259;
+    color: #fff;
+}
+.filter-section .filter-area ul li a:hover img,
+.filter-section .filter-area ul li.active a img
+{
+    filter: brightness(0) invert(1); 
+}
+
+.filter-section .filter-area ul li a img {
+    width: 24px;
+    float: left;
+    margin: 2px 8px 5px 0;
+}
+.filter-section .filter-area ul li:nth-child(2) img {
+    float: right;
+    filter: unset;
+    width: 22px;
+    margin: 4px 0 0 5px;
+}
+
+:global(.btn-load-more) {
+    width: 165px;
+    margin: 25px auto 0;
+    display: block;
+    background-color: #21b259;
+    color: #fff;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* ================================
+   Responsiveness - Mobile
+================================ */
+
+@media screen and ( max-width: 767px ){
+
+    .filter-section .filter-area {
+        border-bottom: unset;
+        padding-bottom: 0;
+    }
+    .filter-section .filter-area ul {
+        border: 1px solid #ccc;
+        padding: 0;
+    }
+    .filter-section .filter-area ul li.filter-sort-item {
+        width: calc(100%/2);
+        float: left;
+        position: relative;
+        margin: 0;
+    }
+    .filter-section .filter-area ul li a.filter-btn,
+    .filter-section .filter-area ul li a {
+        background: transparent;
+        color: #000000;
+        padding: 25px 0 20px 0;
+        font-size: 16px;
+        float: none;
+        display: block;
+        line-height: 0;
+    }
+    .filter-section .filter-area ul li.filter-sort-item:first-child:before {
+        content: '';
+        width: 1px;
+        height: 30px;
+        background: #cccccc;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .filter-section .filter-area ul li.active {
+        background-color: #21b259;
+    }
+    .filter-section .filter-area ul li.active a {
+        color: #fff;
+    }
+    .filter-section .filter-area ul li a img {
+        display: inline-block;
+        float: none;
+        width: 15px;
+        filter: unset;
+        margin: -10px 8px -1px 0;
+    }
+    .filter-section .filter-area ul li:nth-child(2) a img {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        margin: 0 0 0 5px;
+    }
+    .menu .menuItem {
+        width: 100%;
+        float: none;
+    }
+
+}

@@ -1,0 +1,95 @@
+/** The "thumbnail" is a round pil button below the product image in mobile or
+ * as a thumbnail to the left of the product image in desktop.
+ */
+.root {
+    border: 1px solid rgb(var(--venia-global-color-text));
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    outline: none;
+    background-color: #fff;
+    border: 1px solid transparent;
+    position: relative;
+}
+
+.rootSelected {
+    composes: root;
+    background-color: #f7f7f7;
+    border-color: #f7f7f7;
+    width: 14px;
+    height: 14px;
+    margin: 0;
+}
+
+.image {
+    display: none;
+}
+
+@media screen and (max-width: 767px){
+    .root {
+        background-color: #21b259;
+    }
+    .rootSelected {
+        background-color: #21b259;
+        border-color: #21b259;
+        width: 12px;
+        height: 12px;
+        margin: -1.5px 0 0 0;
+    }
+}
+
+/* For desktop mode where buttons are an image... */
+@media (min-width: 1024px) {
+    .root {
+        border: 1px solid transparent;
+        border-radius: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .rootSelected {
+        composes: root;
+        background-color: transparent;
+        border: 1px solid #f7f7f7;
+    }
+
+    .image {
+        background-color: #fff;
+        border-radius: 0;
+        display: block;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        width: 100%;
+        max-height: 100px;
+    }
+}
+
+@media screen and (max-width: 1399px){
+    .image {
+        max-height: 85px;
+    }
+}
+
+:global(.play-btn) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+:global(.play-btn button) {
+    width: 45px;
+    height: 45px;
+    background-color: #5eb35a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 2px #ddd;
+}
+:global(.play-btn button img) {
+    filter: brightness(0) invert(1);
+    width: 16px;
+    margin-left: 4px;
+}
+

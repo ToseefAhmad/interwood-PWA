@@ -1,0 +1,121 @@
+:global(.dashboard-sidebar){
+    width: 250px;
+    height: 50vh;
+    float: left;
+    position: relative;
+    padding-right: 40px;
+    margin-right: 35px;
+}
+:global(.dashboard-sidebar:before){
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #efefef;
+    width: 2px;
+    height: 100%;
+}
+
+:global(.dashboard-sidebar ul li) {
+    display: block;
+    padding: 10px 0;
+}
+:global(.dashboard-sidebar ul li:first-child) {
+    padding-top: 0;
+}
+:global(.dashboard-sidebar ul li:last-child) {
+    padding-left: 0;
+}
+:global(.dashboard-sidebar ul li a) {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif !important;
+    letter-spacing: 0.35px;
+    padding: 15px 15px 13px 22px;
+    position: relative;
+}
+:global(.dashboard-sidebar ul li a.active:before) {
+    content: '';
+    background: #21b259;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+:global(.dashboard-sidebar ul li a.active){
+    background: #f7f7f7;
+}
+
+/* ==============================
+          Sidebar Toggle
+   ============================== */
+
+:global(.sidebar-toggle)
+{
+    display: none;
+    float: right;
+    margin-bottom: 20px;
+}
+:global(.sidebar-close-btn) {
+    display: none;
+}
+:global(.sidebar-toggle img)
+{
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin-right: 10px;
+}
+:global(.sidebar-toggle span){
+    line-height: 30px;
+}
+:global(.sidebar-close-btn) {
+    width: 100%;
+    padding: 15px 20px;
+}
+:global(.sidebar-close-btn img) {
+    width: 20px;
+    float: right;
+}
+
+@media screen and (max-width: 767px) {
+    :global(.page-main){
+        padding-top: 2rem;
+    }
+    :global(.sidebar-toggle),
+    :global(.sidebar-close-btn)
+    {
+        display: block;
+    }
+    :global(.dashboard-sidebar) {
+         display: none;
+     }
+    :global(.clear) {
+        clear: both;
+    }
+    :global(.dashboard-sidebar) {
+        display: block;
+        width: 300px;
+        height: 100vh;
+        float: left;
+        background: #ffffff;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        z-index: 999;
+        padding-top: 0px;
+        padding-right: 0;
+        margin-right: 0;
+        transition: all .3s;
+        -webkit-transition: all .3s;
+    }
+    :global(.dashboard-sidebar.show){
+        left: 0;
+    }
+}
+
+
+
+

@@ -1,0 +1,24 @@
+:global(.summary-checkoutpage .summary-global-class){
+    width: 100%;
+    float: none;
+    padding-top: 15px;
+    margin-top: 0;
+}
+:global(.summary-checkoutpage .summary-content-global){
+    border: unset;
+}
+:global(.summary-checkoutpage .estimate ){
+    display: none;
+}
+:global(.summary-checkoutpage .field-coupon-code){
+    display: none;
+}
+
+@media screen and (max-width: 767px){
+    :global(.summary-checkoutpage){
+        background-color: #f6f6f6;
+    }
+}
+
+
+

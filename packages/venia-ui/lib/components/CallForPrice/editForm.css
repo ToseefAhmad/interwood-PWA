@@ -1,0 +1,56 @@
+.root {
+    display: grid;
+    gap: 0.5rem 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.field {
+    grid-column-end: span 1;
+}
+.message{
+    grid-column-end: span 2;
+}
+.message textarea {
+    color: #000;
+    padding: 12px 15px;
+    width: 100%;
+    border: 1px solid #f7f7f7;
+    background: #f7f7f7;
+    min-height: 120px;
+}
+
+.email,
+.passwordLabel {
+    composes: field;
+}
+
+.buttons {
+    composes: field;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+    justify-self: center;
+    padding: 1rem;
+}
+
+.changePasswordButtonContainer {
+    padding-top: 1rem;
+}
+
+@media (max-width: 960px) {
+    .firstname,
+    .lastname,
+    .password,
+    .newPassword {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media screen and (max-width: 767px){
+    .field {
+        grid-column-end: span 2;
+    }
+}
+
+

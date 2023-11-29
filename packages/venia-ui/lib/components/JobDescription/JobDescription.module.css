@@ -1,0 +1,82 @@
+:root{
+    --primary-color:#5eb35a;
+}
+
+:global(.job-description-container > div){
+    display: grid;
+    align-items: flex-start;
+    grid-template-columns: 150px 1fr;
+    margin-bottom: 1rem;
+}
+
+:global(.job-description-container > div > h2 ){    
+    color: #5eb35a;
+}
+:global(.job-description-container > div > p ){
+    color: #666;
+    font-size: 13px;
+    align-self: flex-start;
+}
+
+
+:global(.job-description-container .description h3){
+    font-size: 13px;
+    font-weight: bold;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+:global(.job-description-container .description p){
+    color: #666;
+    font-size: 12px;
+}
+
+:global(.job-description-container .description .responsibilities p.rich-content *){
+    color: #666;
+    font-size: 12px;
+}
+
+:global(.position-title p){
+    font-size: 14px;
+    font-weight: bold;
+}
+
+:global(.job-description-container .experience .read-more){
+    grid-column: 2;
+    padding: 0;
+    margin: 0;
+    margin-top: 0.5rem;
+    color:var(--primary-color);
+}
+
+:global(.read-more:hover){
+    cursor: pointer;
+    display: block;
+}
+
+:global(.apply-btn){
+    margin-bottom: 1rem;
+    background: green;
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: white;
+
+}
+
+:global(.bottom-line){
+    border-bottom: 1px solid var(--primary-color);
+    position: relative;
+}
+
+:global(.cancel){
+    position: absolute;
+    font-weight: bold;
+    right: -5px;
+    top: -34px;
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+}
+:global(.cancel:hover){
+    cursor: pointer;
+    font-size: 1.2rem;
+}

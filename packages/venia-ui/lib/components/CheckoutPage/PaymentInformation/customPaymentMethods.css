@@ -1,0 +1,172 @@
+:global(.custom-payment-method) {
+    color: #000000;
+}
+:global(.custom-payment-method:not(:last-child)) {
+    padding-bottom: 15px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #e8e8e8;
+}
+:global(.custom-payment-method input) {
+    -webkit-appearance: none;
+    background: none;
+    background-clip: content-box;
+    border: 1.5px solid #676767;
+    border-radius: 50%;
+    grid-area: input;
+    width: 15px;
+    height: 15px;
+    margin: 0px 6px -2px 0;
+    position: relative;
+}
+:global(.custom-payment-method input:checked){
+    border-color: #21b259;
+}
+:global(.custom-payment-method input:checked:before) {
+    content: '';
+    width: 7px;
+    height: 7px;
+    background-color: #21b259;
+    border-radius: 50%;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+@media screen and (max-width: 767px){
+    :global(.custom-payment-method input:checked:before) {
+        left: 2.5px;
+    }
+}
+
+:global(.d-block) {
+    display: block;
+}
+:global(.mb-10){
+    margin-bottom: 10px;
+}
+:global(.w-500){
+    font-weight: 500 !important;
+}
+:global(.text-color-primary){
+    color: #21b259;
+}
+:global(.custom-payment-method p) {
+    font-weight: 300;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    color: #000;
+}
+:global(.custom-payment-method p a) {
+    color: #21b259;
+    font-weight: 500;
+}
+:global(.detail-item) {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 300;
+}
+:global(.detail-item strong) {
+    font-weight: 500;
+    color: #333;
+    font-size: 14px;   
+}
+:global(body .bank-branch-title){
+    color: #21b259;
+    font-size: 14px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.35px;
+    font-weight: 600 !important;
+}
+:global(.installment-plan-methods) {
+    float: right;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: -26px;
+}
+:global(.installment-plan-methods img) {
+    width: 54%;
+    margin: 0;
+    float: right
+}
+:global(.installment-main-brands){
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 -12px 20px;
+}
+:global(.installment-main-brands img){
+    width: 250px;
+}
+:global(.custom-payment-method .summary) {
+    padding: 10px 0 0 20px;
+    font-weight: 300;
+    color: #000000;
+    line-height: 1.3;
+    font-size: 14px;
+    letter-spacing: 0.35px;
+}
+:global(body .checkout-method-qistpay){
+    width: 46px;
+    margin: 7px 0 0 0;
+}
+:global(.custom-checkbox-holder) {
+    margin: 0 5px 25px 0;
+    display: block;
+    float: left;
+}
+:global(.btn-term-conditions){
+    color: #909090;
+    text-decoration: underline;
+    font-size: 14px;
+}
+:global(.payment-method-details.has-text) {
+    color: #000;
+    font-weight: 300;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+/* :global(body .checkout-method-sprite){
+    margin-top: 16px;
+} */
+
+@media screen and (max-width: 767px) {
+    :global(body .checkout-method-qistpay){
+        width: 50px;
+        margin-top: -25px;
+    }
+    :global(body .checkout-method-sprite){
+        margin: -4px -20px 0 0;
+        width: 61%;
+    }
+    :global(.custom-payment-method input:checked:before) {
+        top: 2px;
+    }
+    :global(.installment-plan-methods) {
+        margin-right: -15px;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    :global(.installment-plan-methods) {
+        margin-top: -6px;
+    }
+}
+.installment-msg{
+    color: #ea4531;
+    font-weight: bold;
+}
+
+.terms{
+    text-decoration: underline;
+    font-size: 11px;
+}
+
+.qp-size{
+    font-size: 14px !important; ;
+}

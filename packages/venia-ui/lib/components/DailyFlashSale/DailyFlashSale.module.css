@@ -1,0 +1,90 @@
+.DailyFlashSale {
+    margin: 0;
+}
+
+.DailyFlashSale__TimerAndTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-top: 2px solid rgba(0, 0, 0, 0.2); */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+}
+
+.DailyFlashSale__TitleContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.DailyFlashSale__Title {
+    font-size: 28px;
+    font-weight: 500;
+    color: green;
+}
+
+.DailyFlashSale__Text {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width:500px) {
+
+    .DailyFlashSale__TimerAndTitle {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+
+    .DailyFlashSale__Title {
+        font-size: 21px;
+    }
+}
+
+/* TIMERS STYLES */
+
+.DailyFlashSale__Time {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.DailyFlashSale__hour,
+.DailyFlashSale__minute,
+.DailyFlashSale__second {
+    padding: 1rem;
+    background-color: #f43434;
+    color: white;
+    font-weight: 500;
+    border-radius: 2px;
+}
+
+@media screen and (max-width:500px) {
+
+    .DailyFlashSale__hour,
+    .DailyFlashSale__minute,
+    .DailyFlashSale__second {
+        padding: 0.5rem;
+    }
+}
+
+/* SLIDER STYLES */
+
+.DailyFlashSale__ItemsSlider {
+    padding-top: 3rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+
+}
+
+:global([data-element="DailyFlashSale__ItemsSlider"] .slick-slider .slick-dots li button) {
+    background-color: #ddd !important;
+}
+
+
+:global([data-element="DailyFlashSale__ItemsSlider"] .slick-dots li.slick-active button) {
+    background-color: #f43434 !important;
+}

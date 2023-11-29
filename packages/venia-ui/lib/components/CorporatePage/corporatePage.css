@@ -1,0 +1,36 @@
+.root {
+    clear: both;
+    padding: 3.5em 0 0 0;
+}
+:global(.corporate-page-section) {
+    margin-bottom: 25px;
+}
+:global(.corporate-page-section img) {
+    display: block;
+    margin: 0 auto;
+}
+:global(.corporate-page-footer) {
+    text-align: center;
+}
+:global(.corporate-page-footer a) {
+    text-align: center;
+    display: inline-block;
+    margin: 25px 0 0 0;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.35px;
+    color: #5eb35a;
+    border-bottom: 1px solid #5eb35a;
+    cursor: pointer;
+}
+  
+@media screen and (max-width: 767px){
+
+    .root{
+        padding-top: 1em;
+    }
+
+}
+
+
+

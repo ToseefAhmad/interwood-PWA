@@ -1,0 +1,47 @@
+.root {
+    display: grid;
+    gap: 0.5rem 1.5rem;
+    grid-template-columns: 1fr;
+}
+select {
+    padding: 5px 15px !important;
+}
+:global(.filter-checkbox-label) {
+    margin-left: 0;
+    margin-top: 7px;
+    display: inline-block;
+}
+
+/*
+ *  Desktop-specific styles.
+ */
+@media (min-width: 961px) {
+    .root {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fullWidthField {
+        grid-column-end: span 1;
+    }
+    .fullWidthField:last-child{
+        grid-column-end: span 2;
+    }
+    :global(.field-telephone) {
+        grid-column-end: span 2;
+    }
+
+
+    .lastname,
+    .country,
+    .default_address_check {
+        composes: fullWidthField;
+    }
+}
+
+@media screen and (max-width: 767px){
+    :global(.modal-checkbox-group .filter-checkbox-label) {
+        margin-left: 30px;
+    }
+}
+
+

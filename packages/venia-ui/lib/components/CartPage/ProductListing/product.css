@@ -1,0 +1,301 @@
+.root {
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.item {
+    align-items: start;
+    display: grid;
+    grid-gap: 0.5rem 1rem;
+    grid-template-areas: 'image details kebab';
+    grid-template-columns: 100px 1fr min-content;
+}
+
+.errorText {
+    color: rgb(var(--venia-global-color-error));
+    line-height: var(--venia-global-lineHeight-300);
+}
+
+.errorText:empty {
+    display: none;
+}
+
+.imageContainer {
+    grid-area: image;
+}
+
+.imageRoot {
+    height: 100%;
+}
+
+.image {
+    background-color: rgb(var(--venia-global-color-gray));
+    border: solid 1px rgb(var(--venia-global-color-border));
+    border-radius: 2px;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.details {
+    display: grid;
+    gap: 0.5rem;
+    grid-area: details;
+    grid-template-areas:
+        'name name'
+        'options quantity'
+        'price quantity'
+        'stock quantity';
+    grid-template-columns: 2fr 1fr;
+    line-height: 1.5;
+}
+
+.name {
+    grid-area: name;
+    font-weight: 600;
+}
+
+.price {
+    grid-area: price;
+    font-size: 0.875rem;
+}
+
+.quantity {
+    align-items: start;
+    display: grid;
+    grid-area: quantity;
+    justify-items: center;
+}
+
+.kebab {
+    grid-area: kebab;
+    position: relative;
+}
+
+.sectionText {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+    pointer-events: none;
+}
+
+.options {
+    grid-area: options;
+    font-size: 0.875rem;
+    display: grid;
+    grid-gap: 0.125rem;
+}
+
+.optionLabel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+}
+
+.stockStatusMessage {
+    color: rgb(var(--venia-global-color-error));
+    font-size: var(--venia-global-fontSize-100);
+    font-weight: var(--venia-global-fontWeight-semibold);
+    grid-area: stock;
+}
+
+.stockStatusMessage:empty {
+    display: none;
+}
+
+@media (max-width: 640px) {
+    .details {
+        grid-template: none;
+    }
+
+    .name,
+    .options,
+    .price,
+    .stockStatusMessage,
+    .quantity {
+        grid-area: auto;
+    }
+
+    .quantity {
+        justify-items: start;
+    }
+}
+
+
+.form-content {
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+.form-content .item-image {
+    width: 20%;
+    display: inline-block;
+}
+.form-content .item-details {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 30px;
+    padding-top: 10px;
+}
+.form-content .item-details .items {
+    padding-bottom: 12px;
+}
+
+.form-content .item-name, .item-sku, .item-design, .item-size {
+    font-size: 18px;
+    line-height: 1.2;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    font-weight: 500;
+ }
+.form-content .optionLabel {
+    margin-bottom: 10px;
+}
+.item-has-options span, .item-has-options dd, .item-has-options dt {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    font-weight: 500;
+}
+.item-has-options dd {
+    font-weight: 300;
+}
+.item-details .items {
+    padding-bottom: 12px;
+}
+.form-content .qty-price {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 10px;
+}
+.qty-price .items-price {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    text-align: right;
+}
+.edit-delete {
+    padding: 15px 0;
+}
+.edit-delete .item-edit {
+    display: inline-block;
+    width: 70%;
+    cursor: pointer;
+}
+.edit-delete .item-edit img {
+    float: right;
+    width: 20px;
+    margin-top: -23px;
+}
+.edit-delete .item-delete {
+    display: inline-block;
+    width: 30%;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 15px;
+}
+.edit-delete .item-delete img {
+    float: right;
+    width: 24px;
+}
+
+.qty-box {
+    float: right;
+}
+.qty-box button {
+    width: 40px;
+    height: 40px;
+    line-height: 46px;
+}
+.qty-box input {
+    width: 90px !important;
+    height: 40px;
+}
+
+@media screen and (max-width: 767px) {
+
+    .form-content {
+        padding: 0;
+        border-bottom: 1px solid #cecece;
+        margin-bottom: 18px;
+    }
+    .root:last-child .form-content {
+        border-bottom: unset;
+        margin-bottom: 0;
+    }
+    .item-image {
+        width: 38% !important;
+    }
+    .item-details {
+        padding-left: 15px !important;
+    }
+    .item-details {
+        margin-bottom: 18px;
+        width: 54% !important;
+    }
+    .item-details .items {
+        padding-bottom: 8px;
+        font-size: 14px;
+    }
+    .items span {
+        font-size: 14px;
+    }
+    .item-has-options span, .item-has-options dd, .item-has-options dt {
+        font-size: 14px;
+    }
+    .qty-price{
+        width: 100%;
+    }
+    .qty-price {
+        width: 100% !important;
+        position: relative;
+    }
+
+    .qty-price .items-price {
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+        color: #000;
+        text-align: left;
+        width: 60%;
+        float: right;
+        bottom: 38px;
+        position: relative;
+        padding-left: 10px;
+    }
+    .edit-delete {
+        padding: 10px 0 0 0; 
+    }
+    .qty-box {
+        text-align: right;
+        position: absolute;
+        right: -3px;
+        top: 8px;
+    }
+    .qty-box .input-qty {
+        padding: 3px 12px;
+        width: 40px;
+    }
+    .edit-delete .item-edit {
+        width: 8%;
+    }
+    .edit-delete .item-delete {
+        width: 8%;
+        float: left;
+    }
+    .qty-box button {
+        width: 28px;
+        height: 28px;
+        line-height: 33px;
+    }
+    .qty-box button svg {
+        width: 16px;
+    }
+    .qty-box input {
+        width: 55px !important;
+        height: 28px;
+        font-size: 14px;
+    }
+
+}
+

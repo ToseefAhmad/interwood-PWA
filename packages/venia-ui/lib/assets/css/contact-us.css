@@ -1,0 +1,227 @@
+:global(.contact-map){
+    width: 100vw;
+    margin-left: calc(((100vw - (100% - 15px) ) / 2) * (-1)) !important;
+    display: inline-block;
+    margin-top: -16px;    
+}
+:global(.contact-map #iframeid) {
+    width: 100%;
+    height: 630px;
+}
+:global(.contact-us .main-container){
+    padding: 0 0;
+}
+:global(.contact-us .main-title) {
+    font-size: 32px;
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+    margin-bottom: 32px;
+    margin-top: 50px;
+    font-weight: 500;
+}
+:global(.contact-us label) {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+    font-weight: 500;
+}
+:global(.contact-us .form) {
+    width: 50%;
+    display: inline-block;
+}
+:global(.single-row) {
+    width: 100%;
+}
+
+:global(.single-row) {
+    font-family: "Poppins", sans-serif;
+    background-color: #f7f7f7;
+    height: 50px;
+    border-color: transparent;
+    margin-top: 18px;
+    margin-bottom: 26px;
+    padding: 20px;
+    font-size: 18px;
+}
+
+:global(.textarea, input:focus) {
+    outline: none;
+}
+
+:global(.double-row) {
+    font-family: "Poppins", sans-serif;
+    background-color: #f7f7f7;
+    height: 170px;
+    border-color: transparent;
+    margin-top: 18px;
+    margin-bottom: 26px;
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+}
+:global(.contact-us .label:after) {
+    content: "*";
+    color: red;
+    padding-left: 4px;
+}
+:global(.submit) {
+    background-color: #1fa54c;
+    color: #fff;
+    border: 1px solid #1fa54c;
+    padding: 8px 45px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+:global(.contact-us .list-icon li) {
+    padding-left: 0;
+    margin-bottom: 28px;
+    display: inline-flex;
+}
+:global(.contact-us .list-icon li i) {
+    font-size: 20px;
+}
+
+:global(.contact-us .list-icon li a) {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+    padding-left: 25px;
+    display: inline-block;
+    word-break: break-all;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+:global(.contact-information) {
+    width: 49%;
+    display: inline-block;
+    padding-left: 80px;
+    vertical-align: top;
+}
+
+:global(.contact-information h3) {
+    display: inline-block;
+    padding: 10px 18px;
+    font-size: 100%;
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    -webkit-border-radius: 0.25rem;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #1fa54c;
+    letter-spacing: 0.35px;
+
+}
+
+:global(.list-icon) {
+    list-style: none;
+    padding-top: 28px;
+}
+
+:global(.icon-location span) {
+    display: block;
+}
+:global(.list-icon .fas) {
+    float: left;
+    display: inline-block;
+    margin-top: 6px;
+}
+:global(.list-icon .fas:before) {
+    font-size: 28px;
+    float: left;
+}
+:global(.contact-us) {
+    margin-bottom: 30px;
+}
+:global(.contact-us .required){
+    color: red;
+}
+
+@media only screen and (max-width: 600px) {
+    :global(.submit) {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    :global(.contact-us .control ){
+        margin-bottom: 8px;
+    }
+    :global(.list-icon li) {
+        width: 100%;
+    }
+    :global(.contact-us .form) {
+        width: 100%;
+    }
+    :global(.list-icon .fas) {
+        margin-top: 3px;
+    }
+
+    :global(.list-icon .fas:before) {
+        font-size: 18px;
+    }
+    :global(.contact-information h3) {
+        font-size: 12px;
+    }
+    :global(.contact-us .list-icon li a) {
+        font-size: 15px;
+        padding-left: 12px;
+    }
+    :global(.contact-information) {
+        width: 100%;
+        padding-left: 0px;
+        margin-top: 40px;
+    }
+    :global(.contact-us .main-title) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 26px;
+    }
+    :global(.contact-us label) {
+        font-size: 16px;
+    }
+    :global(.contact-us .single-row) {
+        height: 50px;
+        margin-top: 18px;
+        margin-bottom: 12px;
+    }
+    :global(.contact-us) {
+        margin-bottom: 20px;
+    }
+    :global(.contact-us .submit) {
+        padding: 11px 30px;
+        font-size: 18px;
+    }
+    :global(.contact-map #iframeid) {
+        height: 350px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    :global(.contact-map #iframeid) {
+        height: 350px;
+    }
+    :global(.contact-us label),
+    :global(.list-icon li a) {
+        font-size: 18px;
+    }
+    :global(.list-icon .fas:before) {
+        font-size: 22px;
+    }
+    :global(.list-icon li a) {
+        display: inline-block;
+        word-break: break-all;
+        padding-left: 20px;
+    }
+    :global(.contact-information) {
+        padding-left: 40px;
+    }
+
+}

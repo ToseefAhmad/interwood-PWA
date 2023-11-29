@@ -1,0 +1,209 @@
+.root {
+    display: grid;
+    gap: 0.5rem 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+.color-text-primary {
+    color: #00b950;
+}
+/* :global(.checkout-seprator) {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 500;
+} */
+
+:global(.checkout-seprator) {
+    margin-top: 0;
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    color: #00b950;
+}
+:global(.checkout-seprator:before){content: "";width: 47%;height: 1px;background-color: #e2e2e2;position: absolute;left: 0;top: 9px;}
+:global(.checkout-seprator:after){content: "";width: 47%;height: 1px;background-color: #e2e2e2;position: absolute;right: 0;top: 9px;}
+
+.field {
+    grid-column-end: span 2;
+    position: relative;
+}
+
+.email,
+.country,
+.street0,
+.street1,
+.city,
+.region,
+.postcode,
+.telephone {
+    composes: field;
+}
+
+.firstname,
+.lastname {
+    grid-column-end: span 1;
+}
+
+.buttons {
+    composes: field;
+    padding: 2rem 0;
+}
+.buttons button {
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid #ea4531;
+    background: #ea4531;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+    line-height: 30px;
+    height: 54px;
+    padding: 12px 30px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+.buttons button:first-child{
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 767px){
+    .buttons button:first-child{
+        margin-bottom: 15px;
+    }
+}
+
+.buttons button:nth-child(2){
+    background-color: #21b259;
+    border-color: #21b259;
+}
+.buttons button span {
+    color: #ffffff;
+    font-weight: 600;
+}
+.required {
+    position: absolute;
+    left: 50px;
+    font-size: 22px;
+    color: red;
+    margin-top: 18px;
+}
+
+
+@media (max-width: 960px) {
+    .firstname {
+        grid-column: 1 / span 2;
+    }
+
+    .lastname {
+        grid-column: 1 / span 2;
+    }
+}
+
+@media screen and ( max-width: 767px ){
+    .buttons button {
+        font-size: 15px;
+        padding: 12px 25px;
+        width: 100%;
+    }
+    :global(.checkout-seprator:before),
+    :global(.checkout-seprator:after){
+        width: 45%;
+    }
+}
+
+:global(.info-free-shipping){
+    font-size: 16px;
+    font-weight: 400;
+    color: #5eb35a;
+    padding-left: 20px;
+}
+:global(.modal-checkbox-wrapper.info-free-shipping){
+    line-height: 1.4;
+}
+
+:global(.int-checklabel) {
+    display: inline-block;
+    position: relative;
+    margin: 0 0 0 0;
+    padding-left: 0px;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #000;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    -webkit-appearance: none;
+    padding-right: 8px;
+}
+:global(.no-gutter){
+    padding: 0;
+}
+:global(.int-checklabel:after) {
+    content: '';
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: -12px;
+    left: -20px;
+    border: 1px solid #000;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: #fff;
+}
+:global(.int-checklabel:checked:before) {
+    content: '\e84e';
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: -13px;
+    left: -18px;
+    font-family: 'Porto';
+    font-weight: 900;
+    font-size: 14px;
+    color: #00b950;
+    z-index: 1;
+}
+:global(.checkbox-wrapper .filter-checkbox-label) {
+    margin-left: 0;
+}
+:global(.has-required-icon){
+    position: absolute;
+    color: red !important;
+    font-size: 22px;
+    left: 50px;
+    margin-top: 8px;
+}
+:global(.required-fn),
+:global(.required-ln)
+{
+    left: 95px;
+}
+:global(.required-sa),
+:global(.required-pn) 
+{
+    left: 130px;
+}
+:global(.required-city){
+    left: 38px;
+}
+:global(.required-country) {
+    left: 75px;
+}
+
+@media screen and (max-width: 767px){
+    :global(.checkbox-wrapper .filter-checkbox-label) {
+        margin-left: 25px;
+    }
+}
+
+:global(.checkbox-wrapper input[type="checkbox"]) {
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+

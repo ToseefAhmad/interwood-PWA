@@ -1,0 +1,249 @@
+.root {
+    padding: 2.5rem 0;
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.body {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 18rem;
+    /* The summary grid item spans the entire right column. */
+    grid-template-areas:
+        'items summary'
+        'adjustments summary';
+}
+
+.heading_container {
+    display: grid;
+    margin-bottom: 1rem;
+    row-gap: 1rem;
+}
+
+.heading {
+    line-height: 1.25em;
+}
+
+.stockStatusMessageContainer:empty {
+    display: none;
+}
+
+.items_container {
+    grid-area: items;
+}
+
+.price_adjustments_container {
+    grid-area: adjustments;
+}
+
+.summary_container {
+    grid-area: summary;
+    height: 100%;
+}
+
+.summary_contents {
+    position: sticky;
+    /*
+     * TODO: Use CSS Properties (variables) or something instead of hardcoding this.
+     *  - 3.5rem = min-height of nav header. See the "toolbar" class in header.css.
+     *  - 2rem = padding-top of the cart page.
+     */
+    top: 5.5rem;
+}
+
+/*
+ * Mobile-specific styles.
+ */
+
+@media (max-width: 960px) {
+
+    .body {
+        /* Only one column in mobile view. */
+        grid-template-columns: 100%;
+        grid-template-areas:
+            'items'
+            'adjustments'
+            'summary';
+    }
+    .root {
+        padding: 0 0;
+    }
+}
+
+
+.text-center {
+    text-align: center;
+}
+.title-header {
+    margin-bottom: 65px;
+}
+.cart-page header h2 {
+    padding-top: 15px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 31px;
+    color: #323232;
+    text-transform: capitalize;
+    font-size: 28px;
+    padding-bottom: 10px;
+    font-weight: 500;
+    position: relative;
+}
+.title-header h2:after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: -1px;
+    background: #21b259;
+    width: 150px;
+    height: 3px;
+    right: 0;
+    margin: -2px auto 0;
+}
+
+.left-section{
+    width: 68%;
+    float: left;
+}
+.cart-page .cart-form {
+    border: 1px solid #a0a0a0;
+
+}
+.cart-form{
+    overflow: hidden;
+    padding: 20px 20px;
+}
+.bottom-buttons {
+    width: 100%;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.cont-shopping a{
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    padding: 12px 30px;
+    font-size: 16px;
+}
+.bottom-buttons .update-cart button {
+    background-color: #21b259;
+    border: 1px solid #21b259;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 16px;
+}
+.bottom-buttons .clear-cart button{
+    background-color: #fff;
+    border: 1px solid #21b259;
+    padding: 15px 40px;
+    font-size: 16px;
+    color: #21b259;
+}
+.bottom-buttons .update-cart button{
+    background-color: #21b259;
+    border: 1px solid #21b259;
+    color: #fff;
+    padding: 15px 36px;
+    font-size: 16px;
+}
+
+.cart-action-right {
+    display: flex;
+}
+.cart-action-right .clear-cart {
+    margin-right: 15px;
+}
+:global(.cart-attributes) {
+    margin-bottom: 8px;
+    font-size: 18px;
+    font-weight: 500;
+}
+:global(.cart-attributes span) {
+    font-weight: 300;
+}
+:global(.cart-error) {
+    font-size: 15px;
+    text-transform: capitalize;
+    margin-top: 5px;
+    line-height: 1.3;
+    color: red;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .body {
+        gap: unset;
+    }
+    .cart-page header {
+        display: none;
+    }
+    .left-section {
+        width: 100%;
+    }
+    .cart-form {
+        padding: 20px 10px;
+    }
+    .cart-page .row {
+        display: flex;
+        flex-direction: column;
+    }
+    .left-section{
+        order: 2;
+        margin-top: 20px;
+    }
+    .cont-shopping {
+        width: 100%;
+    }
+    .clear-cart {
+        width: 100%;
+    }
+    .update-cart{
+        width: 100%;
+    }
+    .bottom-buttons button {
+        width: 100%;
+        padding: 10px 40px !important;
+        margin-bottom: 10px;
+        font-size: 14px !important;
+    }
+    .bottom-buttons {
+        width: 100%;
+        float: left;
+        display: inline-block;
+        padding: 40px 0 0 0;
+    }
+    :global(.cart-attributes) {
+        margin-bottom: 5px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .left-section {
+        width: 100%;
+    }
+    .root {
+        max-width: 850px;
+    }
+}
+
+:global(.cartpage-carousel) {
+    float: left;
+    width: 100%;
+    margin-top: 35px;
+}
+
+
+/* Lower segment */
+.lowerSliderTitle {
+    text-align: left;
+}
+.lowerSliderTitle h2::after {
+    display: none;
+}
+.lowerSliderTitle h2 {
+    text-transform: unset !important;
+    font-size: 23px;
+}

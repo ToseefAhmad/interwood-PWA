@@ -1,0 +1,508 @@
+.root {
+    display: grid;
+    gap: 1.5rem;
+    justify-items: stretch;
+    padding: 1rem 1.5rem;
+}
+
+.forgotPassword {
+    display: block;
+    text-decoration: underline;
+    color: rgb(var(--venia-global-color-error));
+    font-size: 0.8rem;
+}
+
+.form {
+    display: grid;
+    row-gap: 0.9375rem;
+}
+
+.modal {
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(var(--venia-global-color-gray));
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.modal_active {
+    visibility: visible;
+    composes: modal;
+    opacity: 0.9;
+}
+
+.buttonsContainer {
+    display: grid;
+    gap: 1.5rem;
+    grid-auto-flow: row;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.forgotPasswordButtonContainer {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    justify-self: start;
+    text-align: center;
+}
+
+.forgotPasswordButton {
+    composes: root from '../LinkButton/linkButton.css';
+
+    padding: 0;
+}
+
+.title {
+    padding-top: 0.5rem;
+    text-transform: capitalize;
+}
+
+/* ================================
+          Login Form Styles
+   ================================ */
+
+.int-form {
+    float: left;
+    width: 100%;
+}
+.form-holder {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 75px 0 0px;
+}
+.form-holder:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+@media screen and (max-width: 1560px) {
+    .form-holder {
+        max-width: 1240px;
+        padding: 80px 0px 0px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .form-holder {
+        max-width: none;
+    }
+}
+@media screen and (max-width: 767px) {
+    .form-holder {
+        padding: 40px 20px 10px;
+    }
+    .root {
+        padding: 1rem 0;
+    }
+}
+
+/* ================================
+            Form Area
+   ================================ */
+
+.form-area {
+    float: left;
+    width: 58%;
+    padding-left: 15px;
+    padding-right: 75px;
+}
+.form-head {
+    margin-bottom: 15px;
+    color: #000;
+    font-size: 34px;
+    font-weight: 500;
+    padding-bottom: 23px;
+    border-bottom: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+}
+.text-head {
+    font-size: 20px;
+    line-height: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    margin-bottom: 25px;
+    display: block;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.wrp-field {
+    float: left;
+    width: 100%;
+    margin: 0 0 10px;
+}
+.wrp-field label {
+    display: none;
+}
+.wrp-field input {
+    font-size: 18px;
+    line-height: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #7d7d7d;
+    float: left;
+    height: 60px;
+    padding: 15px 22px;
+    width: 100%;
+    border: 1px solid #f7f7f7;
+    background: #f7f7f7;
+    box-shadow: none;
+    outline: none;
+}
+.wrp-field .input_error {
+    border-color: red !important;
+}
+.wrp-field input:hover,
+.wrp-field input:focus {
+    box-shadow: none;
+    outline: none;
+}
+.text-forgot {
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    margin: 0 0 18px;
+    float: left;
+    width: 100%;
+    line-height: 1.3;
+}
+.link-forgot {
+    color: #00b950;
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none;
+}
+.link-forgot:hover,
+.link-forgot:focus {
+    color: #00b950;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all ease-in 0.3s;
+}
+.bt-login {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    margin: 0 0 20px;
+    background: #fb0000;
+    width: 278px;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #fb0000;
+    height: 60px;
+    padding: 15px 25px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+}
+.bt-login:hover,
+.bt-login:focus {
+    outline: none;
+    box-shadow: none;
+    opacity: 0.8;
+    transition: all ease-in 0.3s;
+}
+@media screen and (max-width: 1399px) {
+    .form-head {
+        font-size: 25px;
+    }
+
+    .text-forgot,
+    .bt-login,
+    .wrp-field input,
+    .text-head {
+        font-size: 16px;
+    }
+    .wrp-field input {
+        line-height: 30px;
+        height: 54px;
+        padding: 12px 15px;
+    }
+    .bt-login {
+        width: 278px;
+        height: 54px;
+        padding: 12px 15px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .form-area {
+        width: 55%;
+        padding-right: 40px;
+    }
+    .form-head {
+        font-size: 24px;
+    }
+    .text-head {
+        font-size: 15px;
+    }
+    .text-forgot,
+    .wrp-field input {
+        font-size: 16px;
+    }
+    .wrp-field input {
+        line-height: 22px;
+        height: 50px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .form-area {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: 40px;
+    }
+    .text-forgot,
+    .wrp-field input {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 479px) {
+    .text-head,
+    .text-forgot,
+    .wrp-field input {
+        font-size: 14px;
+    }
+}
+
+/* ================================
+           New Account Area
+   ================================ */
+
+.cr-acc {
+    float: right;
+    width: 42%;
+    padding-left: 20px;
+}
+.form-head {
+    margin-bottom: 15px;
+    color: #000;
+    font-size: 34px;
+    font-weight: 500;
+    padding-bottom: 23px;
+    border-bottom: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+}
+.text-head {
+    font-size: 20px;
+    line-height: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+    margin-bottom: 25px;
+    display: block;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+.bt-create {
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    display: block;
+    margin: 0 0 20px;
+    background: #00b950;
+    width: 278px;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #00b950;
+    height: 60px;
+    padding: 15px 25px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+}
+.bt-create:hover,
+.bt-create:focus {
+    outline: none;
+    box-shadow: none;
+    opacity: 0.8;
+    transition: all ease-in 0.3s;
+    color: #fff;
+}
+/* Media Queries */
+@media screen and (max-width: 1399px) {
+    .form-head {
+        font-size: 28px;
+    }
+    .bt-create,
+    .text-head {
+        font-size: 16px;
+    }
+    .wrp-field input{
+        line-height: 30px;
+        height: 54px;
+        padding: 12px 15px;
+    }
+    .bt-create {
+        height: 54px;
+        padding: 12px 15px;
+        line-height: 30px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .cr-acc {
+        width: 45%;
+    }
+    .form-head {
+        font-size: 24px;
+    }
+    .text-head {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .cr-acc {
+        width: 100%;
+        padding-left: 0;
+    }
+}
+@media screen and (max-width: 479px) {
+    .text-head {
+        font-size: 14px;
+    }
+}
+
+
+/* ================================
+                Modal
+   ================================ */
+
+:global(.modal) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 1000;
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    transition-delay: .3s;
+}
+/* :global(.modal--active) {
+    visibility: visible;
+    opacity: 1;
+} */
+:global(.modal--align-top) {
+    align-items: flex-start;
+}
+:global(.modal__bg) {
+    background: rgba(0,0,0,0.5);
+}
+:global(.modal__dialog) {
+    max-width: 750px;
+    padding: 1.2rem;
+}
+:global(.modal__content) {
+    position: relative;
+    padding: 3rem 2rem;
+    background: #fff;
+    background-clip: padding-box;
+    box-shadow: 0 12px 15px 0 rgba(0,0,0,0.25);
+    opacity: 1;
+    transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+    text-align: center;
+}
+:global(.modal__vector img) {
+    width: 130px;
+    display: block;
+    margin: 0 auto 20px;
+}
+:global(.modal__title) {
+    font-size: 25px;
+    color: #000;
+    font-weight: 500;
+    letter-spacing: 0.25px;
+    margin-bottom: 10px;
+}
+:global(.modal__discription) {
+    font-size: 18px;
+    max-width: 80%;
+    margin: 0 auto;
+    line-height: 1.3;
+    letter-spacing: 0.25px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 18px;
+}
+:global(.btn-modal) {
+    min-width: 200px;
+    height: 45px;
+    letter-spacing: 0.25px;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 16px;
+    transition: all .3s;
+}
+:global(.btn-modal-primary) {
+    background-color: #00b950;
+}
+
+:global(.modal__content--active) {
+    opacity: 1;
+}
+:global(.modal__close) {
+    z-index: 1100;
+    cursor: pointer;
+}
+:global(#modal__temp) {
+    will-change: transform, opacity;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffebee;
+    transform: none;
+    opacity: 1;
+    transition: opacity 0.1s ease-out, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+:global(.demo-close) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1.2rem;
+    padding: 0.6rem;
+    background: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+:global(.demo-close svg) {
+    width: 24px;
+    fill: #fff;
+    pointer-events: none;
+    vertical-align: top;
+}
+:global(.demo-close:hover) {
+    background: rgba(0,0,0,0.6);
+}
+
+@media screen and (max-width: 767px){
+    :global(.modal__discription) {
+        max-width: 100%;
+    }
+}
+
+
+.msg{
+    color: #00b950;
+}

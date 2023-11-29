@@ -1,0 +1,95 @@
+:global(.bg-theme-white) {
+    background-color: #ffffff;
+}
+:global(.top-menu) {
+    position: relative;
+    padding: 6px 0px;
+    font-size: 1.4rem;
+    font-family: 'Nexa-Book';
+    border-bottom: 2px solid #f7f7f7;
+    float: left;
+    width: 100%;
+}
+
+:global(.top-menu .header-top-left) {
+    float: left;
+}
+
+:global(.top-menu .header-top-left .contact-info) {
+    color: #21b259;
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+:global(.top-menu .header-top-left .contact-info i) {
+    font-size: 20px;
+    float: left;
+    line-height: 0.7;
+}
+
+:global(.top-menu .header-top-left .contact-info span) {
+    float: left;
+    margin-left: 5px;
+    line-height: 24px;
+}
+
+:global(.top-menu .header-top-right) {
+    float: right;
+}
+
+:global(.top-menu .header-top-right ul) {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+:global(.top-menu .header-top-right ul li) {
+    float: left;
+    padding: 0 25px;
+    list-style: none;
+}
+
+:global(.top-menu .header-top-right ul li:first-child) {
+    padding-left: 0;
+}
+
+:global(.top-menu .header-top-right ul li:last-child) {
+    padding-right: 0;
+}
+
+:global(.top-menu .header-top-right ul li a) {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+    line-height: normal;
+    font-family: 'Nexa-Book';
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: 400;
+}
+
+:global(.top-menu .header-top-right ul li a:hover) {
+    color: #21b259;
+}
+
+:global(.top-menu .header-top-left .contact-info a) {
+    color: #21b259;
+}
+
+@media screen and (max-width: 767px){
+    :global(.headerTop) {
+        display: none;
+    }
+    :global(.top-menu .header-top-left) {
+        display: none;
+    }
+    :global(.top-menu .header-top-right ul li) {
+        padding: 0 30px 0 0;
+    }
+    :global(.top-menu .header-top-right) {
+        float: inherit;
+        display: flex;
+        justify-content: center;
+    }
+}

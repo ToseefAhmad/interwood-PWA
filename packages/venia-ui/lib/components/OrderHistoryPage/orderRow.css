@@ -1,0 +1,143 @@
+.root {
+    border: 1px solid #000;
+    border-left: unset;
+    border-radius: 0;
+    display: grid;
+    grid-template-columns: minmax(9rem, 1fr) minmax(9rem, 1fr) minmax(9rem, 1fr) 16rem 2fr 3rem;
+}
+
+@media screen and (max-width: 1399px){
+    .root {
+        grid-template-columns: minmax(9rem, 1fr) minmax(9rem, 1fr) minmax(9rem, 1fr) 12rem 2fr 3rem;
+    }
+}
+
+.cell {
+    border-left: 1px solid #000;
+    padding: 1.5rem;
+    overflow: hidden;
+}
+
+.stackedCell {
+    composes: cell;
+    display: grid;
+    row-gap: 0.25rem;
+}
+
+.label {
+    font-size: 13px;
+    font-weight: 500;
+    color: #565656;
+}
+
+.value {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.orderNumberContainer,
+.orderDateContainer,
+.orderTotalContainer {
+    composes: stackedCell;
+}
+
+.orderStatusContainer {
+    composes: stackedCell;
+    row-gap: 0.75rem;
+}
+
+.orderItemsContainer {
+    composes: cell;
+    padding: 0;
+}
+
+.contentToggleContainer {
+    composes: cell;
+    padding: 0;
+}
+
+.orderNumberLabel,
+.orderDateLabel,
+.orderTotalLabel {
+    composes: label;
+}
+
+.orderNumber,
+.orderDate,
+.orderTotal {
+    composes: value;
+}
+
+.orderStatusBadge {
+    composes: label;
+    border: 1px solid #0A2240;
+    color: #0A2240;
+    border-radius: 0;
+    font-weight: 500;
+    justify-self: flex-start;
+    padding: 5px 15px;
+}
+
+.content {
+    border-top: 1px solid #ccc;
+    grid-column: 1 / -1;
+    padding: 1.5rem 15px 1.5rem 0;
+    margin-top: 15px;
+}
+
+.content_collapsed {
+    display: none;
+}
+
+@media (max-width: 960px) {
+    .root {
+        grid-template-columns: 1fr 1fr;
+        border-left: 1px solid #000;
+    }
+
+    .cell {
+        border-left: none;
+    }
+    .content {
+        padding-left: 1.5rem;
+    }
+    .contentToggleContainer {
+        grid-column-start: 2;
+        grid-row-start: 1;
+        justify-self: flex-end;
+        padding: 0 1.5rem;
+    }
+
+    .orderStatusContainer {
+        grid-column-end: span 2;
+    }
+
+    .orderItemsContainer {
+        border-bottom: 2px solid rgb(var(--venia-global-color-gray));
+        grid-column-end: span 2;
+        padding: 0 0;
+    }
+
+    .orderItemsContainer:empty {
+        display: none;
+    }
+
+    .orderNumberContainer {
+        align-items: center;
+        column-gap: 0.5rem;
+        grid-auto-flow: column;
+        grid-column: 1 / span 2;
+        grid-row: 1;
+        justify-content: flex-start;
+    }
+
+    .orderDateContainer {
+        border: 2px solid rgb(var(--venia-global-color-gray));
+        border-left: none;
+    }
+
+    .orderTotalContainer {
+        border-bottom: 2px solid rgb(var(--venia-global-color-gray));
+        border-top: 2px solid rgb(var(--venia-global-color-gray));
+    }
+}

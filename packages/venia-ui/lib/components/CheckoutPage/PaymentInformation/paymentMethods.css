@@ -1,0 +1,30 @@
+.root {
+    display: grid;
+}
+
+.payment_method {
+    border-bottom: unset;
+}
+
+.payment_method:last-of-type {
+    border-bottom-width: 0;
+}
+
+.radio_label {
+    font-weight: 600;
+    justify-self: start;
+}
+
+.payment_errors {
+    display: grid;
+    gap: 0.5em;
+    color: rgb(var(--venia-global-color-error));
+}
+
+
+:global(.custom-method-title) {
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+

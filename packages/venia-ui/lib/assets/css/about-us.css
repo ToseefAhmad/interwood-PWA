@@ -1,0 +1,73 @@
+:global(.about-us),
+:global(.payment)
+{
+    padding-top: 3.5rem;
+}
+:global(.about-us .main-title)
+{
+    font-size: 34px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 35px;
+    margin-top: 70px;
+}
+:global(.about-us .sub-title)
+{
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+    color: #000000;
+    margin-bottom: 26px;
+    font-weight: 500;
+}
+
+:global(.ul-dash) {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+:global(.ul-dash li) {
+    list-style-type: "-";
+}
+:global(.li-style) {
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.8 !important;
+    padding: 0 0 20px 8px !important;
+}
+:global(.ul-style) {
+    padding-left: 20px;
+}
+:global(.para-style) {
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+    line-height: 30px;
+    color: #000000;
+    margin-bottom: 25px;
+    font-weight: 400;
+}
+:global(.sub-title.mt-2) {
+    margin-top: 1rem;
+}
+
+@media only screen and (max-width: 767px) {
+    :global(.about-us .main-title) {
+        margin-top: 30px;
+        font-size: 22px;
+    }
+    :global(.ul-dot li) {
+        padding-left: 12px;
+    }
+
+    :global(.about-us .sub-title) {
+        font-size: 18px;
+    }
+    :global(.li-style),
+    :global(.para-style) {
+        font-size: 14px !important;
+        line-height: 28px;
+    }
+
+    :global(.all-para) {
+        padding-bottom: 0px;
+    }
+}

@@ -1,0 +1,73 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+:global(#verifyotp .wait) {
+  color: red;
+  font-size: 14px;
+}
+
+:global(.verifyfield button[disabled]) {
+  background-color: #cecece;
+}
+
+:global(.verify label) {
+  display: block;
+  padding-bottom: 10px;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+:global(.verify input) {
+  height: 28px;
+}
+
+:global(.verify p) {
+  padding-bottom: 15px;
+}
+
+:global(.verify button) {
+  margin-left: 10px;
+  background-color: #21b259;
+  color: #fff;
+  padding: 1px 20px;
+
+}
+
+:global(.verify .btntwo) {
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  :global(.verify input) {
+    height: 28px;
+    width: 95%;
+    margin-bottom: 10px;
+  }
+
+  :global(.verify button) {
+    margin-left: 0px;
+  }
+
+  :global(#verifyotp p) {
+    max-width: 67%;
+  }
+}
+
+@media screen and (max-width: 413px) {
+  :global(#verifyotp p) {
+    max-width: 73%;
+  }
+}
+
+@media screen and (max-width: 365px) {
+  :global(#verifyotp p) {
+    max-width: 90%;
+  }
+}

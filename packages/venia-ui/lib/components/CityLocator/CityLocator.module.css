@@ -1,0 +1,43 @@
+.CityName{
+    text-align: center;
+    margin:1rem;
+    font-size: xx-large;
+    text-transform: capitalize;
+}
+
+.BestSellingText{
+    text-align: center;
+    margin-top:2rem;
+}
+
+.storeLocation{
+    display: flex;
+    margin-top: 3rem;
+    width: 100%;
+    flex-direction: row;
+}
+
+.storeLocationRightBlock{
+    flex:1 1 100%;
+}
+
+@media screen and (max-width: 991px){
+    .CityName,
+    .PageContents h1{
+        font-size: 18px !important;
+        line-height: 24px !important;
+        font-weight: 500 !important;
+    }    
+    .BestSellingText
+    {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+
+
+@media screen and (min-width:820px) and (max-width:1180px) {
+    .CityName{
+        margin-top: 2.5rem !important;
+    }
+}

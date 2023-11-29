@@ -1,0 +1,579 @@
+.navigation{
+    float: left;
+    width: 100%;
+}
+
+.header-bottom {
+    display: flex !important;
+    align-items: center;
+    color: #000;
+    background: #fff;
+    height: 55px;
+    border-bottom: 1px solid #d4d4d4;
+    border-top: 1px solid #d4d4d4;
+}
+
+.menu, .menu li, .menu ul, .menu ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.menu:after {
+    display: block;
+    clear: both;
+    content: '';
+}
+
+.menu .show > ul, .menu .show > .megamenu {
+    opacity: 1;
+}
+
+.menu li > a {
+    display: block;
+    padding: .8rem 1.8rem;
+    transition: .2s ease-out;
+    color: #777;
+}
+
+.menu li:hover > a, .menu li.show > a, .menu li.active > a {
+    background: #f4f4f4;
+}
+
+.menu > li {
+    float: left;
+    position: relative;
+    margin-right: 2.8rem;
+}
+/* .menu > li:first-child a {
+    color: #21B259 !important;
+} */
+
+.menu > li > a {
+    padding: 1rem 0;
+    font-size: 13px;
+    font-weight: 400;
+    color: #555;
+}
+
+.menu > li:hover > a, .menu > li.show > a, .menu > li.active > a {
+    color: #282d3b;
+    background: transparent;
+}
+
+/* .menu > li > .sf-with-ul:before {
+    content: '';
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    bottom: 0;
+    margin-left: -14px;
+    border: 10px solid;
+    border-color: transparent transparent #fff;
+    opacity: 0;
+    transition: opacity ease-in .08s;
+} */
+
+.menu > li.show > .sf-with-ul:before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu .megamenu {
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.15);
+    border: 1px solid #eee;
+    border-top: 3px solid #282d3b;
+    left: 15px;
+    padding: 25px 10px 15px;
+    width: 770px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .1s;
+    -webkit-transition: all .1s;
+    -moz-transition: all .1s;
+}
+
+.mega-menu-item {
+    width: calc(100% / 3);
+    float: left;
+    position: relative;
+    padding: 0 15px;
+    box-sizing: border-box;
+    -webkit-column-break-inside: avoid;
+    break-inside: avoid;
+    width: auto;
+
+}
+@-moz-document url-prefix() {
+    .mega-menu-item {
+        display: inline-grid;
+        page-break-inside: avoid;
+        float: unset;
+        width: 100%;
+    }
+  }
+
+.menu .megamenu.megamenu-3cols {
+    width: 635px;
+}
+
+.main-nav .menu li.has-megamenu:hover .megamenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu .megamenu img {
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu .megamenu .submenu {
+    margin: 0;
+    padding-top: 0;
+    border-top: none;
+    display: block;
+    position: static;
+    box-shadow: none;
+    min-width: 0;
+    float: left;
+    width: 100%;
+}
+
+.menu .megamenu .submenu li a:hover {
+    color: #21b259;
+}
+
+.menu .megamenu .submenu a {
+    font-size: 13px;
+    font-weight: 400;
+    background: transparent;
+    color: #000;
+    text-align: left;
+    border-bottom: 1px solid #eee !important;
+    padding: 5px 0 !important;
+    margin: 0 !important;
+    color: #737171;
+}
+
+.menu .megamenu .submenu li:first-child a {
+    padding-top: 0;
+}
+
+.mega-menu-item .submenu:after {
+    content: '';
+    height: 80%;
+    width: 1px;
+    position: absolute;
+    background: #eaeaea;
+    top: 40px;
+    right: 7px;
+}
+
+.mega-menu-item .submenu:last-child:after {
+    display: none;
+}
+
+.menu .nolink {
+    display: inline-block;
+    padding-bottom: 6px;
+    color: #333;
+}
+
+.menu ul {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+    padding: 5px 0;
+    border-top: 3px solid #282d3b;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+    background-color: #fff;
+    box-shadow: 0 29px 29px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul ul {
+    top: -5px;
+    left: 100%;
+}
+
+.menu.sf-arrows .sf-with-ul + ul > li {
+    position: relative;
+}
+
+.menu.sf-arrows .sf-with-ul:after {
+    position: absolute;
+    right: 1rem;
+    content: '\e81a';
+    font-family: 'porto';
+}
+
+.menu.sf-arrows > li > .sf-with-ul:after {
+    content: '\e81c';
+    position: static;
+    margin-left: 5px;
+    font-weight: 400;
+}
+
+.main-nav .menu {
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.main-nav .menu li > a {
+    color: #767f84;
+}
+
+.main-nav .menu > li {
+    margin-right: 0;
+}
+
+.main-nav .menu > li:first-child a {
+    padding-left: 0;
+}
+
+.main-nav .menu li a {
+    padding: 5px 25px 0 0;
+    color: #000000;
+    font-size: 16px;
+    font-family: 'Nexa-Book', sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.header-bottom .main-nav .menu > li:hover > a,
+.header-bottom .main-nav .menu > li.show > a,
+.header-bottom .main-nav .menu > li.active > a {
+    color: #21b259;
+    border-color: #21b259;
+}
+
+.main-nav .menu > li:first-child a {
+    padding-left: 0;
+}
+
+.main-nav .menu > li:not(.float-right):last-child, .main-nav .menu > li:not(.float-right) + li.float-right {
+    margin-right: 0;
+}
+
+.main-nav .menu.sf-arrows ul {
+    border-top: none;
+}
+
+.main-nav .menu > li > ul {
+    left: -15px;
+}
+
+.main-nav .menu .megamenu {
+    top: 50px;
+    left: 0px;
+    border-top: none;
+}
+
+.main-nav .menu .megamenu img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-nav .menu .nolink {
+    color: #222222;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.75;
+    text-transform: uppercase;
+    border-bottom: 1px solid #eee !important;
+    padding-bottom: 12px;
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding-right: 10px;
+    padding-top: 0;
+    margin: 0 !important;
+    padding: 0px 0 6px !important;
+}
+
+.main-nav .menu li.show .megamenu {
+    display: block;
+}
+
+.tip {
+    display: inline-block;
+    position: relative;
+    margin: -2px 0 0 1rem;
+    padding: 3px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: uppercase;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+.tip:before {
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    left: auto;
+    margin-top: -3px;
+    border: 3px solid transparent;
+    content: '';
+}
+
+.tip-new {
+    background-color: #0fc567;
+}
+
+.tip-new:not(.tip-top):before {
+    border-right-color: #0fc567;
+}
+
+.tip-new.tip-top:before {
+    border-top-color: #0fc567;
+}
+
+.tip-hot {
+    background-color: #eb2771;
+}
+
+.tip-hot:not(.tip-top):before {
+    border-right-color: #eb2771;
+}
+
+.tip-hot.tip-top:before {
+    border-right-color: #eb2771;
+}
+
+.tip-top {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-top: 6px;
+    margin-left: -2px;
+    transform: translate(-50%);
+}
+
+.tip-top:before {
+    top: 100%;
+    right: 60%;
+    margin: 0;
+}
+
+.main-nav .menu {
+    text-transform: uppercase;
+    font-size: 16px;
+    text-align: center;
+}
+
+.main-nav .menu > li {
+    margin-right: 0;
+    float: none;
+    display: inline-block;
+}
+
+.mobile-menu-toggler {
+    border: 0;
+    background: transparent;
+    color: #222529;
+    padding: 1rem .5rem;
+    margin-right: .5rem;
+    font-size: 20px;
+    line-height: 0;
+    cursor: pointer;
+}
+.header-bottom nav.main-nav ul.menu li a {
+    margin: 5px 25px 0 0;
+    padding: 0;
+    border-bottom: 2px solid transparent;
+}
+.header-bottom nav.main-nav ul.menu li:last-child a {
+    margin-right: 0;
+}
+
+.header-bottom nav.main-nav ul.menu > li > a:hover,
+.header-bottom nav.main-nav ul.menu > li.active > a{
+    color: #21b259;
+    border-color: #21b259;
+}
+
+.header-bottom .container {
+    position: relative;
+    padding: 0;
+}
+
+.header-bottom  nav.main-nav ul.menu li {
+    position: unset;
+}
+
+.header-bottom nav.main-nav ul.menu li .megamenu {
+    top: 43px;
+    width: 1170px;
+}
+
+:global(.megamenu-column) {
+    float: left;
+    width: 70%;
+    -webkit-column-count: 5;
+    column-count: 4;
+    -webkit-column-gap: 0;
+    column-gap: 0;
+}
+:global(.megamenu-has-banner){
+    width: 25%;
+    float: right;
+    padding-right: 10px;
+}
+:global(.promobanner) {
+    position: relative;
+    overflow: hidden;
+}
+
+:global(.megamenu-wrapper nav ul li a[href="/kids-furniture.html"] + .megamenu),
+:global(.megamenu-wrapper nav ul li a[href="/sale.html"] + .megamenu)
+{
+    width: 800px !important;
+    left: 50% !important;
+    transform: translate(-50%);
+}
+:global(.megamenu-wrapper nav ul li a[href="/sale.html"] + .megamenu),
+:global(.megamenu-wrapper nav ul li a[href="/wardrobes.html"] + .megamenu),
+:global(.megamenu-wrapper nav ul li a[href="/door-design.html"] + .megamenu),
+:global(.megamenu-wrapper nav ul li a[href="/kitchens.html"] + .megamenu),
+:global(.megamenu-wrapper nav ul li a[href="/home-decor.html"] + .megamenu)
+{
+    width: 700px !important;
+    left: unset !important;
+    right: 0;
+    transform: none;
+}
+:global(.megamenu-wrapper nav ul li a[href="/home-decor.html"] + .megamenu)  {
+    width: 800px !important;
+}
+:global(.megamenu-wrapper nav ul li a[href="/sale.html"] + .megamenu) {
+    left: 0 !important;
+    right: unset;
+}
+:global(.megamenu-wrapper nav ul li a[href="/kids-furniture.html"] + .megamenu .megamenu-column)
+{
+    column-count: 2;
+    width: calc(100% - 280px);
+}
+:global(.megamenu-wrapper nav ul li a[href="/wardrobes.html"] + .megamenu .megamenu-column){
+    column-count: 1;
+    width: calc(100% - 280px);
+}
+:global(.megamenu-wrapper nav ul li a[href="/sale.html"] + .megamenu) {
+    width: 500px !important;
+}
+:global(.megamenu-wrapper nav ul li a[href="/sale.html"] + .megamenu .megamenu-column) {
+    column-count: 3;
+    width: 100%;
+}
+
+:global(.megamenu-wrapper nav ul li a[href="/kitchens.html"] + .megamenu .megamenu-column),
+:global(.megamenu-wrapper nav ul li a[href="/door-design.html"] + .megamenu .megamenu-column),
+:global(.megamenu-wrapper nav ul li a[href="/bedroom-furniture.html"] + .megamenu .megamenu-column)
+{
+    column-count: 2;
+    width: calc(100% - 280px);
+}
+:global(.megamenu-wrapper nav ul li a[href="/home-decor.html"] + .megamenu .megamenu-column) {
+    column-count: 3;
+    width: calc(100% - 280px);
+}
+:global(.megamenu-wrapper nav ul li a[href="/bedroom-furniture.html"] + .megamenu) {
+    width: 700px !important;
+}
+
+:global(.megamenu-wrapper nav ul li a[href="/sale.html"]){
+    color: red;
+}
+
+:global(a[href="/11-11-sale.html"]){
+    color: red;
+}
+
+/* Css For Sale MEnu | Will Be Removed If Banner Not Required */
+
+:global(.megamenu-wrapper nav ul li a[href="/sale.html"] + .megamenu) {
+    width: 465px !important;
+}
+:global(.megamenu-wrapper nav ul li a[href="/sale.html"] + .megamenu .megamenu-column) {
+    column-count: 1;
+    width: calc(100% - 280px);
+}
+
+
+/*-----------------------------
+        End Menu Bottom
+------------------------------*/
+
+@media screen and (max-width: 767px) {
+
+    .main-nav .menu {
+        white-space: nowrap;
+        overflow-x: auto;
+    }
+
+    /*.main-nav .menu li {
+        float: none;
+        display: inline;
+    }*/
+
+    .main-nav .menu li a {
+        padding: 0 12px 0 0;
+        display: inline;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+}
+:global(.megamenu-column.\31) {
+    column-count: 1;
+    width: calc(100% - 300px);
+}
+:global(.megamenu-column.\32) {
+    column-count: 2;
+    width: calc(100% - 300px);
+}
+
+:global(.megamenu-column.\31 .mega-menu-item){
+    max-width: 230px;
+}
+:global(.has-megamenu.\31 > .megamenu){
+    width: auto !important;
+    left: 50% !important;
+    transform: translate(-50%);
+    min-width: 650px;
+}
+:global(.has-megamenu.\32 > .megamenu){
+    width: 800px !important;
+}
+:global(.megamenu-has-banner) {
+    width: 270px;
+}
+
+@media screen and (max-width: 1220px) and (min-width: 768px){
+    .header-bottom {
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 1025px) and (min-width: 768px) {
+    .navigation {
+        overflow-x: hidden;
+    }
+}

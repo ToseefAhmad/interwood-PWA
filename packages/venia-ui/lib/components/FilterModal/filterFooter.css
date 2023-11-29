@@ -1,0 +1,29 @@
+.root {
+    align-items: center;
+    background-color: white;
+    display: grid;
+    height: 5rem;
+    row-gap: 0.25rem;
+    justify-items: center;
+    align-content: center;
+    position: relative;
+}
+button {
+    outline: none;
+}
+
+.root button {
+    min-width: 15rem;
+    border-radius: 0;
+    min-height: 45px;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.35px;
+    box-shadow: none;
+}
+.root button:not(:disabled) {
+    background: #f33333;
+    border-color: #f33333;
+}
+

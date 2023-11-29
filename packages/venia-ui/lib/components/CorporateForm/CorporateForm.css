@@ -1,0 +1,340 @@
+.wrp-field {
+    float: left;
+    width: 100%;
+    margin: 0 0 30px;
+}
+.int-text {
+    font-size: 16px;
+    line-height: 30px;
+    font-family: 'poppinsregular', sans-serif;
+    color: #7d7d7d;
+    float: left;
+    height: 60px;
+    padding: 15px 22px;
+    width: 100%;
+    border: 1px solid #f7f7f7;
+    background: #f7f7f7;
+    box-shadow: none;
+    outline: none;
+}
+.int-text:hover,
+.int-text:focus {
+    box-shadow: none;
+    outline: none;
+}
+.wrap-select {
+    float: left;
+    width: 100%;
+    position: relative;
+}
+.wrap-select:after {
+    content: '\f107';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    color: #000;
+    font-size: 22px;
+    line-height: 1;
+    margin: 0;
+    width: 22px;
+    height: 22px;
+    transform: translateY(-50%);
+}
+select.int-text {
+    padding-right: 45px;
+    -webkit-appearance: none;
+}
+.int-label {
+    display: block;
+    margin: 0 0 15px;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #000;
+    font-weight: 500;
+    font-family: 'poppinsmedium', sans-serif;
+}
+.rq-label {
+    display: inline-block;
+    vertical-align: top;
+    background-image: url('/../../assets/img/icons/star-icon.png');
+    background-repeat: no-repeat;
+    background-size: 10px 8px;
+    width: 10px;
+    height: 8px;
+    margin-top: 9px;
+}
+.wrap-split {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.split-form {
+    float: left;
+    width: 50%;
+    padding: 0 10px;
+}
+.split-quart {
+    float: left;
+    width: 40%;
+    padding: 0 10px;
+}
+.split-fluid {
+    float: left;
+    width: 60%;
+    padding: 0 10px;
+}
+.int-check {
+    visibility: hidden;
+    display: inline-block;
+    vertical-align: top;
+    margin: 7px -3px 0 0px;
+}
+.wrp-checbox {
+    float: left;
+    width: 100%;
+    margin: 0 0 10px;
+}
+.int-checklabel {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0 0 0 -14px;
+    padding-left: 24px;
+    width: calc(100% - 18px);
+    font-size: 16px;
+    line-height: 1.3;
+    color: #000;
+    font-weight: 500;
+    font-family: 'poppinsregular', sans-serif;
+}
+.int-checklabel:after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    border: 1px solid #000;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    background: #fff;
+}
+.int-check:checked ~ .int-checklabel:before {
+    content: '\f00c';
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    border: 1px solid #000;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 14px;
+    color: #00b950;
+    z-index: 1;
+}
+.btn-wrp {
+    float: left;
+    width: 100%;
+    margin-top: 20px;
+}
+.bt-create {
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+    font-family: 'poppinsregular', sans-serif;
+    display: block;
+    background: #00b950;
+    width: 278px;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #00b950;
+    height: 60px;
+    padding: 15px 25px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+}
+.bt-create:hover,
+.bt-create:focus {
+    outline: none;
+    box-shadow: none;
+    opacity: 0.8;
+    transition: all ease-in 0.3s;
+}
+
+@media screen and (max-width: 1399px) {
+    .form-head {
+        font-size: 28px;
+    }
+    .text-head {
+        font-size: 22px;
+    }
+    .int-text {
+        font-size: 16px;
+    }
+    .int-text {
+        line-height: 30px;
+        height: 54px;
+        padding: 12px 15px;
+    }
+    .int-label {
+        font-size: 18px;
+        margin: 0 0 8px;
+    }
+    .int-checklabel {
+        font-size: 18px;
+    }
+    .bt-create {
+        width: 228px;
+        height: 54px;
+        padding: 12px 15px;
+        line-height: 30px;
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .form-head {
+        font-size: 24px;
+    }
+    .int-text {
+        font-size: 16px;
+        line-height: 22px;
+        height: 50px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .text-login {
+        font-size: 15px;
+    }
+    .int-checklabel {
+        font-size: 16px;
+        line-height: 1.3;
+    }
+    .wrp-field {
+        margin: 0 0 20px;
+    }
+}
+@media screen and (max-width: 479px) {
+    .split-form {
+        width: 100%;
+        padding: 0 10px 30px;
+    }
+    .split-form:last-child {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .int-checklabel {
+        font-size: 15px;
+    }
+    .rq-label {
+        background-size: 10px 8px;
+        width: 10px;
+        height: 8px;
+        margin-top: 4px;
+        margin-left: 1px;
+    }
+    .bt-create {
+        width: 100%;
+    }
+}
+.corp-info,
+.int-regform {
+    float: left;
+    width: 100%;
+}
+.form-holder {
+    max-width: 960px;
+    margin: 50px auto;
+    padding: 60px 65px;
+    box-shadow: inset 0 0 1px rgba(0,0,0,0.15), 0 0 15px rgba(0,0,0,0.15);
+}
+.form-holder:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.wrp-formInfo {
+    max-width: 100%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.form-head {
+    margin-bottom: 28px;
+    color: #000;
+    font-size: 35px;
+    line-height: 1.3;
+    font-weight: 700;
+    font-family: 'Nexa-Bold', sans-serif;
+    padding-bottom: 10px;
+}
+.sep-head {
+    border-bottom: 2px solid #00c85f;
+}
+.text-head {
+    font-size: 26px;
+    line-height: 1.3;
+    font-weight: 500;
+    font-family: 'poppinsmedium', sans-serif;
+    color: #000;
+    margin-bottom: 10px;
+    display: block;
+    text-transform: capitalize;
+}
+/* Media Queries */
+@media screen and (max-width: 1399px) {
+    .form-holder {
+        max-width: 768px;
+        padding: 45px 50px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .form-holder {
+        max-width: 670px;
+    }
+    .text-head {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .form-holder {
+        padding: 30px 20px;
+        max-width: 100%;
+        box-shadow: none;
+        margin: 0;
+    }
+    .wrp-formInfo {
+        max-width: 100%;
+    }
+    .int-text {
+        font-size: 15px;
+    }
+    .text-head {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 479px) {
+    .split-form {
+        width: 100%;
+        padding: 0 10px 30px;
+    }
+    .split-form:last-child {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .text-head {
+        font-size: 15px;
+    }
+}
+
+
+.error-msgs{
+    margin-bottom: 7px;
+    color: #D8000C;
+    font-size: 16px;
+}

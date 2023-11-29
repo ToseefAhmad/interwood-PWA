@@ -1,0 +1,179 @@
+.root {
+}
+
+@media screen and (max-width: 767px) {
+    .int-text {
+        font-size: 15px;
+    }
+}
+
+.int-text{
+    font-size: 18px;
+    line-height: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #7d7d7d;
+    float: left;
+    height: 60px;
+    padding: 15px 22px;
+    width: 100%;
+    border: 1px solid #f7f7f7;
+    background: #f7f7f7;
+    box-shadow: none;
+    outline: none;
+}
+
+.int-text:hover,
+.int-text:focus {
+    box-shadow: none;
+    outline: none;
+}
+.int-label {
+    display: block !important;
+    margin: 0 0 15px;
+    font-size: 18px;
+    color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+.rq-label {
+    display: inline-block;
+    vertical-align: top;
+    background-image: url(../../assets/img/star-icon.png);
+    background-repeat: no-repeat;
+    background-size: 10px 9px;
+    background-position: bottom;
+    width: 10px;
+    height: 11px;
+}
+.bt-send {
+    font-size: 18px;
+    line-height: 30px;
+    color: #fff;
+    font-family: 'poppinsregular', sans-serif;
+    display: block;
+    margin: 0 0 20px;
+    background: #00b950;
+    width: 278px;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #00b950;
+    height: 60px;
+    padding: 15px 25px;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+}
+.bt-send:hover,
+.bt-send:focus {
+    outline: none;
+    box-shadow: none;
+    opacity: 0.8;
+    transition: all ease-in 0.3s;
+}
+:global(.control) {
+    margin-bottom: 15px;
+    display: inline-block;
+    width: 100%;
+}
+
+:global(.control label) {
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 1399px) {
+    .int-text
+    {
+        line-height: 30px;
+        height: 54px;
+        padding: 12px 15px;
+    }
+}
+
+@media screen and (max-width: 1399px) {
+    .bt-send,
+    .int-text{
+        font-size: 18px;
+    }
+    .int-text{
+        line-height: 30px;
+        height: 54px;
+        padding: 12px 15px;
+    }
+    .int-label {
+        font-size: 18px;
+        margin: 0 0 8px;
+    }
+    .bt-send {
+        width: 160px;
+        height: 54px;
+        padding: 12px 15px;
+        line-height: 30px;
+    }
+}
+@media screen and (max-width: 991px) {
+
+    .int-text{
+        font-size: 16px;
+        line-height: 22px;
+        height: 50px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .root {
+        padding: 1rem 0;
+    }
+}
+@media screen and (max-width: 479px) {
+
+    .rq-label {
+        background-size: 10px 8px;
+        width: 10px;
+        height: 8px;
+        margin-top: 4px;
+        margin-left: 1px;
+    }
+    .bt-send {
+        width: 100%;
+    }
+}
+
+.error-msgs{
+    margin-bottom: 7px;
+    color: #D8000C;
+    font-size: 16px;
+}
+
+.bt-send{
+    margin-top: 10px;
+}
+.captcha-input{
+    display: none;
+}
+.recaptcha{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.email-msg{
+    font-size: 14px;
+    float: right;
+    margin-top: 12px;
+    text-transform: capitalize;
+    color: #57a64d;
+}
+.send-msg{
+    font-size: 25px;
+    margin-bottom: 35px;
+}
+.form-head {
+    margin-bottom: 28px;
+    color: #000;
+    font-size: 35px;
+    line-height: 1.3;
+    font-weight: 700;
+    font-family: 'Nexa-Bold', sans-serif;
+    padding-bottom: 10px;
+}
+.sep-head {
+    border-bottom: 2px solid #00c85f;
+}

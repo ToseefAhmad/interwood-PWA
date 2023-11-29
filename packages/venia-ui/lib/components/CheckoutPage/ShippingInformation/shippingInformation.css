@@ -1,0 +1,130 @@
+.root {
+    /*background: #f7f7f7;*/
+    /*padding: 25px 25px;*/
+    position: relative;
+}
+.root span {
+    line-height: 1.3;
+    /*text-transform: capitalize;*/
+    font-weight: 400;
+    color: #0A2240;
+}
+.checkout-form-title {
+    color: #000;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 22px;
+    position: relative;
+}
+.checkout-form-title:before {
+    position: absolute;
+    font-size: 30px;
+    color: #eee;
+    left: -29px;
+    top: -4px;
+    z-index: -1;
+    font-family: 'Nexa-Bold', sans-serif;
+}
+.checkout-form-title.shipping:before {
+    /* content: '01'; */
+}
+
+.root_editMode {
+    composes: root;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid rgb(var(--venia-global-color-gray-400));
+    padding: 0;
+}
+
+.root_updated {
+    composes: root;
+    animation: flash var(--venia-global-anim-bounce) 640ms 2;
+}
+
+.cardHeader {
+    position: absolute;
+    right: 0;
+}
+
+.cardTitle {
+font-weight: 600;
+}
+
+.editButton {
+    padding: 0;
+    margin: 0;
+}
+.editButton span {
+    color: #00b950 !important;
+}
+.editButton svg{
+    stroke: #00b950;
+}
+
+.editWrapper {
+    display: grid;
+    padding: 1rem 0 1.5rem;
+    row-gap: 0.5rem;
+    margin-bottom: 20px;
+}
+
+.editTitle {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.editIcon {
+    stroke: rgb(var(--venia-brand-color-1-700));
+}
+
+.loading {
+    composes: root from '../../LoadingIndicator/indicator.css';
+    text-align: center;
+}
+
+:global(.guest-form-title) {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding-left: 5px;
+}
+:global(.guest-form-title:before) {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #00b950;
+    position: absolute;
+    left: 0;
+    top: 30px;
+}
+
+
+@media screen and (max-width: 767px){
+    .checkout-form-title {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 960px) {
+    .editText {
+        display: none;
+    }
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@media screen and ( max-width: 767px ){
+    .checkout-form-title:before {
+        top: 23px;
+    }
+}

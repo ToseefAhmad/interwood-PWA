@@ -1,0 +1,69 @@
+.root {
+    color: rgb(var(--venia-global-color-text));
+    display: grid;
+    align-content: start;
+    position: relative;
+}
+
+.label {
+    align-items: center;
+    display: flex;
+    color: #000000;
+    font-size: 17px;
+    font-weight: 400;
+    justify-content: space-between;
+    line-height: 1rem;
+    padding: 15px 0 15px 0;
+    min-height: 2.125rem;
+}
+
+.input, 
+select
+{
+    position: relative;
+    font-size: 16px;
+    line-height: 30px;
+    color: #000000;
+    float: left;
+    height: 54px;
+    padding: 12px 15px;
+    width: 100%;
+    border: 1px solid #f7f7f7;
+    background: #f7f7f7;
+    box-shadow: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+select {
+    background-image: url("../../assets/img/angle-down.svg");
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
+    background-size: 22px;
+}
+/* :global(select:before) {
+    content: '\e81c';
+    font-family: 'Porto';
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    color: #000;
+    font-size: 22px;
+    line-height: 1;
+    margin: 0;
+    width: 22px;
+    height: 22px;
+    transform: translateY(-50%);
+} */
+
+.input:focus {
+    /*box-shadow: -6px 6px rgb(var(--venia-brand-color-1-100));*/
+    outline: none;
+}
+
+.optional {
+    color: #00b950;
+    font-size: var(--venia-global-fontSize-100);
+    font-weight: var(--venia-global-fontWeight-normal);
+}

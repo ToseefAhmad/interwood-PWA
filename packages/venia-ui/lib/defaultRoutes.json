@@ -1,0 +1,202 @@
+[
+    {
+        "name": "AccountInformationPage",
+        "pattern": "/account-information",
+        "exact": true,
+        "path": "../AccountInformationPage"
+    },
+    {
+        "name": "AddressBook",
+        "pattern": "/address-book",
+        "exact": true,
+        "path": "../AddressBookPage"
+    },
+    {
+        "name": "Cart",
+        "pattern": "/cart",
+        "exact": true,
+        "path": "../CartPage"
+    },
+    {
+        "name": "CheckoutPage",
+        "pattern": "/checkout",
+        "exact": true,
+        "path": "../CheckoutPage"
+    },
+    {
+        "name": "CommunicationsPage",
+        "pattern": "/communications",
+        "exact": true,
+        "path": "../CommunicationsPage"
+    },
+    {
+        "name": "CreateAccountPage",
+        "pattern": "/create-account",
+        "exact": true,
+        "path": "../CreateAccountPage"
+    },
+    {
+        "name": "OrderHistory",
+        "pattern": "/order-history",
+        "exact": true,
+        "path": "../OrderHistoryPage"
+    },
+    {
+        "name": "Reset Password",
+        "pattern": "/customer/account/createPassword",
+        "exact": true,
+        "path": "../MyAccount/ResetPassword"
+    },
+    {
+        "name": "SavedPayments",
+        "pattern": "/saved-payments",
+        "exact": true,
+        "path": "../SavedPaymentsPage"
+    },
+    {
+        "name": "Search",
+        "pattern": "/search.html",
+        "exact": true,
+        "path": "../../RootComponents/Search"
+    },
+    {
+        "name": "WishlistPage",
+        "pattern": "/wishlist",
+        "exact": true,
+        "path": "../WishlistPage"
+    },
+    {
+        "name": "SignIn",
+        "pattern": "/signIn",
+        "exact": true,
+        "path": "../SignIn"
+    },
+    {
+        "name": "Password Reset",
+        "pattern": "/reset-password",
+        "exact": true,
+        "path": "../MyAccount/ResetPassword"
+    },
+    {
+        "name": "Installment Form",
+        "pattern": "/installment-form",
+        "exact": true,
+        "path": "../InstallmentForm"
+    },
+    {
+        "name": "Corporate Form",
+        "pattern": "/corporate-form",
+        "exact": true,
+        "path": "../CorporateForm"
+    },
+    {
+        "name": "Blog",
+        "pattern": "/blogs",
+        "exact": true,
+        "path": "../BlogsHome"
+    },
+    {
+        "name": "BlogView",
+        "pattern": "/blog/:blog_id/:url_key",
+        "exact": true,
+        "path": "../Blogs/blogView"
+    },
+    {
+        "name": "BlogsPage",
+        "pattern": "/blogs-page",
+        "exact": true,
+        "path": "../Blogs"
+    },
+    {
+        "name": "ParticularCategoryPage",
+        "pattern": "/blogs-page/:category",
+        "exact": true,
+        "path": "../Blogs/ParticularCategoryPage"
+    },
+    {
+        "name": "CityLocator",
+        "pattern": "/city/:cityName",
+        "exact": true,
+        "path": "../CityLocator/CityLocator"
+    },
+    {
+        "name": "Contact Us",
+        "pattern": "/contact-us",
+        "exact": true,
+        "path": "../ContactUs"
+    },
+    {
+        "name": "Compare",
+        "pattern": "/compare-products",
+        "exact": true,
+        "path": "../CompareList/compareListPage"
+    },
+    {
+        "name": "Store Locator",
+        "pattern": "/store-locator",
+        "exact": true,
+        "path": "../StoreLocator"
+    },
+    {
+        "name": "Lead Form",
+        "pattern": "/lead-form",
+        "exact": true,
+        "path": "../LeadForm"
+    },
+    {
+        "name": "Loyalty Form",
+        "pattern": "/loyalty-form",
+        "exact": true,
+        "path": "../LoyaltyForm"
+    },
+    {
+        "name": "Careers Page",
+        "pattern": "/careers",
+        "exact": true,
+        "path": "../CareersPage"
+    },
+    {
+        "name": "Authorized Dealers Page",
+        "pattern": "/authorized-dealers",
+        "exact": true,
+        "path": "../AuthorizedDealersPage"
+    },
+    {
+        "name": "Rewards Page",
+        "pattern": "/rewards",
+        "exact": true,
+        "path": "../RewardsPage"
+    },
+    {
+        "name": "Corporate Page",
+        "pattern": "/corporate",
+        "exact": true,
+        "path": "../CorporatePage"
+    },
+    {
+        "name": "Order Confirmation Page",
+        "pattern": "/order-confirmation",
+        "path": "../OrderConfirmationPage"
+    },
+    {
+        "name": "Promotional Page",
+        "pattern": "/promotional-page",
+        "path": "../PromotionalPage"
+    },
+    {
+        "name": "Forgot Password",
+        "pattern": "/forgot-password",
+        "exact": true,
+        "path": "../ForgotPassword"
+    },
+    {
+        "name": "Payment Redirction",
+        "pattern": "/payment-redirection",
+        "path": "../PaymentRedirection"
+    },
+    {
+        "name": "Qisst Pay",
+        "pattern": "/qisst-pay",
+        "path": "../QisstPay"
+    }
+]

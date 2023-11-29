@@ -1,0 +1,38 @@
+.root {
+    align-items: center;
+    border-bottom: 1px solid rgb(var(--venia-global-color-border));
+    display: flex;
+    margin: 0 1.25rem;
+    position: relative;
+}
+
+@media screen and (max-width: 767px){
+    .root:first-child button {
+        color: red;
+    }
+}
+
+.target {
+    align-items: center;
+    display: flex;
+    flex: auto;
+    height: 3.5rem;
+    justify-content: flex-start;
+    margin: 0 -1.25rem;
+    padding: 0 1.5rem;
+    width: 100%;
+    color: #000;
+}
+
+.text {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@media (max-width: 767px) {
+    .text
+    {
+        line-height: 28px !important;
+    }
+}

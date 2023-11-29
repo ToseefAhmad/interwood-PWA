@@ -1,0 +1,114 @@
+.root {
+    clear: both;
+    padding: 3.5em 0 0 0;
+}
+:global(.authorize-dealers .main-title ){
+    font-size: 35px;
+    letter-spacing: 0.35px;
+    color: #000000;
+    margin-bottom: 28px;
+    font-weight: 600;
+}
+:global(.authorize-dealers .main-title span){
+    border-bottom: 2px solid #21b259;
+}
+:global(.row) {
+    display: inline-block;
+    margin-top: 28px;
+}
+:global(.authorize-dealers .sub-title){
+    font-size: 24px;
+    letter-spacing: 0.35px;
+    color: #21b259;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+:global(.authorize-dealers .column ){
+    float: left;
+}
+:global(.authorize-dealers .left ){
+    width: 25%;
+}
+:global(.authorize-dealers .right ){
+    width: 75%;
+}
+:global(.authorize-dealers .column p){
+    font-size: 18px;
+    font-weight: 400;
+    text-align: left;
+    text-transform: capitalize;
+    letter-spacing: 0.35px;
+    color: #000;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+:global(.authorize-dealers .left p){
+    background-repeat: no-repeat;
+    padding-left: 34px;
+    background-position: left;
+}
+ :global(.authorize-dealers .left .address){
+    background-image: url(../../assets/img/icons/home_black.svg);
+}
+
+:global(.authorize-dealers .left .person){
+    background-image: url(../../assets/img/icons/person.svg);
+    background-size: 18px !important;
+    background-position: 3px 50%;
+}
+:global(.authorize-dealers .left .cell){
+    background-image: url(../../assets/img/icons/phone_iphone.svg);
+}
+:global(.authorize-dealers .left .phone){
+    background-image: url(../../assets/img/icons/phone.svg);
+}
+:global(.authorize-dealers .left .email){
+    background-image: url(../../assets/img/icons/email_black.svg);
+}
+:global(.authorize-dealers .left .time){
+    background-image: url(../../assets/img/icons/schedule.svg);
+}
+:global(.authorize-dealers .left .auth){
+    background-image: url(../../assets/img/icons/check_circle.svg);
+} 
+:global(.authorize-dealers .left p){
+    background-size: 22px !important;
+}
+  
+@media screen and (max-width: 767px){
+
+    .root{
+        padding-top: 1em;
+    }
+    :global(.authorize-dealers .left ){
+        width: 100%;
+    }
+    :global(.authorize-dealers .right ){
+        width: 100%;
+    }
+    :global(.authorize-dealers .main-title ){
+        font-size: 25px;
+        margin-bottom: 5px;
+        margin-top: 0;
+    }
+    :global(.authorize-dealers .sub-title ){
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    :global(.authorize-dealers .column p ){
+        font-size: 18px;
+        line-height: 44px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px){
+
+    :global(.authorize-dealers .left) {
+        width: 30%;
+    }
+    :global(.authorize-dealers .right) {
+        width: 70%;
+    }
+
+}
+

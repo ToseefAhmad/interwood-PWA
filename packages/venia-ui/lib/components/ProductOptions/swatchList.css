@@ -1,0 +1,4 @@
+.root {
+    composes: root from './tileList.css';
+    display: none;
+}

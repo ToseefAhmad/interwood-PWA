@@ -1,0 +1,28 @@
+.root {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.payment_info_container {
+    border: 1px solid #ddd;
+    padding: 25px 25px;
+}
+
+.loading {
+    composes: root from '../../LoadingIndicator/indicator.css';
+    text-align: center;
+}
+.braintree-sheet {
+    background: transparent !important;
+}
+
+/*
+ * Mobile-specific styles.
+ */
+
+@media (max-width: 960px) {
+    .heading {
+        border-width: 0;
+    }
+}

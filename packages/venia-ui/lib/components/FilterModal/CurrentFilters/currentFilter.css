@@ -1,0 +1,24 @@
+.root {
+    align-items: center;
+    background-color: rgb(var(--venia-global-color-gray-700));
+    border-radius: 6px;
+    color: rgb(var(--venia-global-color-gray-50));
+    display: inline-grid;
+    font-weight: var(--venia-global-fontWeight-semibold);
+    gap: 0.5rem;
+    grid-auto-flow: column;
+    justify-content: center;
+    min-height: 2.5rem;
+    padding: 0.625rem 0.75rem 0.625rem 0.5rem;
+    white-space: nowrap;
+    padding: 6px 8px;
+    min-height: 25px;
+    font-size: 12px;
+    background: #5eb35a;
+    border-radius: 0;
+}
+
+.root svg {
+    stroke: rgb(var(--venia-global-color-gray-50));
+    width: 15px;
+}

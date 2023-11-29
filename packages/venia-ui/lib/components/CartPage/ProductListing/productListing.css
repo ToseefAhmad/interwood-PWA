@@ -1,0 +1,10 @@
+.root {
+    display: grid;
+    grid-gap: 2rem 1rem;
+}
+
+@media screen and (max-width: 767px){
+    .root {
+        grid-gap: 0 1rem;
+    }
+}

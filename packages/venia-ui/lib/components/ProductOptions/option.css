@@ -1,0 +1,25 @@
+.root {
+
+}
+.root:first-child {
+    display: none;
+}
+.title {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    display: none;
+}
+
+.selection {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+    display: flex;
+    display: none;
+}
+
+.selectionLabel {
+    margin-right: 1rem;
+}

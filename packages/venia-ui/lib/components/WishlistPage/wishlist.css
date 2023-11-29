@@ -1,0 +1,60 @@
+.root {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 0;
+    display: grid;
+    padding: 2rem;
+    row-gap: 2rem;
+}
+
+.header {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+}
+
+.nameContainer {
+    align-items: center;
+    gap: 0.5rem 1rem;
+    display: grid;
+    grid-auto-flow: column;
+}
+.nameContainer span {
+    font-size: 15px;
+    color: #21b259;
+    font-weight: 500;
+    letter-spacing: 0.35px;
+    margin-top: 2.5px;
+}
+
+.name {
+    font-weight: 600;
+}
+
+.buttonsContainer {
+    align-items: center;
+    column-gap: 1rem;
+    display: grid;
+    grid-auto-flow: column;
+}
+.buttonsContainer button svg {
+    stroke: #0A2240;
+}
+
+.content_hidden {
+    display: none;
+}
+
+@media (max-width: 960px) {
+    .root {
+        padding: 1.5rem;
+    }
+
+    .nameContainer {
+        grid-auto-flow: row;
+    }
+
+    .buttonsContainer {
+        align-items: flex-start;
+    }
+}

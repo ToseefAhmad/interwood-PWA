@@ -1,0 +1,69 @@
+.root {
+    border: none;
+    border-radius: 0px;
+    /* border-bottom: 2px solid rgb(var(--venia-global-color-gray-400)); */
+    padding: 1rem 0rem;
+    display: grid;
+    row-gap: 1rem;
+}
+.shipping-method-content {
+    background: #f7f7f7;
+    padding: 25px 25px;
+    position: relative;
+    margin-top: 8px;
+}
+:global(.shipping-area){
+    padding: 0;
+}
+.done button span {
+    color: #00b950;
+}
+.done button svg {
+    stroke: #00b950;
+}
+.checkout-form-title {
+    color: #000;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 25px;
+    position: relative;
+}
+.editingHeading {
+    text-transform: uppercase;
+}
+
+.form {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    row-gap: 1.5rem;
+}
+
+.formButtons button {
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid #ea4531;
+    background: #ea4531;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 0;
+    outline: none;
+    box-shadow: none;
+    line-height: 30px;
+    height: 54px;
+    padding: 12px 30px;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+@media screen and ( max-width: 767px ){
+    .formButtons button {
+        font-size: 15px;
+        padding: 12px 12px;
+        width: 100%;
+    }
+    .checkout-form-title {
+        font-size: 20px;
+    }
+}
+

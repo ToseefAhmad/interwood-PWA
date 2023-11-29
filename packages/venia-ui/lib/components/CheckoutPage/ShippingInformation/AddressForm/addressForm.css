@@ -1,0 +1,73 @@
+:global(.input){
+    position: relative;
+    font-size: 16px;
+    line-height: 30px;
+    color: #000000;
+    float: left;
+    height: 54px;
+    padding: 12px 15px;
+    width: 100%;
+    border: 1px solid #f7f7f7;
+    background: #f7f7f7;
+    box-shadow: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+:global(.form-label) {
+    align-items: center;
+    display: flex;
+    color: #000000;
+    font-size: 17px;
+    font-weight: 400;
+    justify-content: space-between;
+    line-height: 1rem;
+    padding: 15px 0 15px 0;
+    min-height: 2.125rem;
+}
+:global(.btn-login){
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #fff;
+    display: block;
+    margin: 0 0 20px;
+    background: #00b950;
+    min-width: 185px;
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #00b950;
+    height: 55px;
+    padding: 12px 25px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+:global(.forgot-password) {
+    float: right;
+    padding-top: 40px;
+    color: #00b950;
+}
+:global(.checkout-note .email-address) {
+    color: #00b950;
+}
+:global(.form-group) {
+    clear: both;
+}
+:global(.error){
+    color: red;
+    line-height: 1.2;
+    font-size: 15px;
+}
+
+@media screen and (max-width: 600px){
+    :global(.forgot-password) {
+        float: right;
+        padding-top: 15px;
+        color: #00b950;
+    }
+    :global(.btn-login){
+        width: 100%;
+    }
+}

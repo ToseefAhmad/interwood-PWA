@@ -1,0 +1,128 @@
+.root {
+    /*
+     * For customization, we provide an empty root.
+     * These styles will be applied to the image container.
+     */
+}
+
+.container {
+    position: relative;
+    overflow: hidden;
+}
+
+/* CIRCLE ANIMATION DESIGN  FOR EACH PRODUCT*/
+
+.figure {
+    background: #fff;
+}
+
+.figure {
+    position: relative;
+}
+
+.figure::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    background: rgba(213, 212, 212, 0.2);
+    border-radius: 100%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.figure:hover::before {
+    -webkit-animation: circle .75s;
+    animation: circle .75s;
+}
+
+@-webkit-keyframes circle {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+    }
+}
+
+@keyframes circle {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+    }
+}
+
+/* CIRCLE ANIMATION DESIGN END */
+
+.image {
+    /*
+     * For customization, we provide an empty image class.
+     * These styles will be applied directly to the image itself.
+     */
+}
+
+.loaded {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    visibility: visible;
+}
+
+body .loaded {
+    outline: unset !important;
+}
+
+.notLoaded {
+    composes: loaded;
+    visibility: hidden;
+}
+
+.placeholder {
+    background-color: rgb(var(--venia-global-color-gray));
+    position: relative;
+    top: 0;
+    left: 0;
+    max-height: 600px;
+}
+
+.placeholder_layoutOnly {
+    composes: placeholder;
+    background-color: unset;
+}
+
+@media screen and (max-width: 767px) {
+
+    .placeholder {
+        max-height: 245px;
+        background-color: #fff !important;
+    }
+
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .placeholder {
+        max-height: 365px;
+        background-color: #f3f3f3 !important;
+    }
+}

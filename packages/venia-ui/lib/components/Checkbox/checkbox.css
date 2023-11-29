@@ -1,0 +1,79 @@
+.root {
+    --stroke: var(--venia-global-color-gray-600);
+    align-items: center;
+    color: rgb(var(--venia-global-color-gray-900));
+    display: grid;
+    gap: calc(0.875rem - 15px);
+    grid-auto-flow: column;
+    grid-template-areas: 'input label';
+    grid-template-columns: min-content 1fr;
+    justify-items: center;
+    line-height: 1.5rem;
+}
+
+.input {
+    -webkit-appearance: none;
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    grid-area: input;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.icon {
+    grid-area: input;
+    height: 1.5rem;
+    pointer-events: none;
+    width: 1.5rem;
+    float: left;
+    margin-top: 6px;
+}
+
+.icon svg {
+    stroke: rgb(var(--stroke));
+    stroke: #000000;
+    width: 15px;
+}
+.icon svg polyline {
+    stroke: #21b259;
+}
+.label {
+    cursor: pointer;
+    font-size: var(--venia-typography-body-M-fontSize);
+    grid-area: label;
+    justify-self: start;
+}
+
+.input:disabled {
+    cursor: default;
+}
+
+/* When the input is disabled, update the cursor on the sibling label element. */
+.input:disabled ~ .label {
+    cursor: default;
+}
+
+.input:checked:enabled + .icon {
+    --stroke: var(--venia-brand-color-1-700);
+}
+
+.input:active:enabled,
+.input:focus:enabled {
+    outline: none;
+}
+:global(.filter-checkbox-label) {
+    margin-left: 28px;
+}
+
+@media screen and (max-width: 767px){
+    .icon {
+        width: 20px;
+        margin-top: 5px;
+    }
+    .label {
+        margin: 0 0 0 -25px; 
+    }
+}
+

@@ -1,0 +1,41 @@
+.root {
+    composes: root from '../clickable.css';
+    border: 1px solid rgb(var(--venia-global-color-text));
+    border-radius: 2px;
+    height: 3rem;
+    min-width: 3rem;
+    padding: 0 0.5rem;
+}
+
+.root_selected {
+    composes: root;
+    background-color: rgb(var(--venia-global-color-text));
+    color: white;
+}
+.root_focused {
+    composes: root;
+}
+.root_selected_focused {
+    composes: root_selected;
+}
+.item-size {
+    border: 1px solid #f1f2f6;
+    background: #f1f2f6;
+    padding: 5px 10px;
+    font-size: 16px !important;
+    line-height: 24px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #000;
+    display: inline-block;
+    vertical-align: top;
+    float: none;
+    width: auto;
+    text-align: center;
+    min-width: 60px;
+    cursor: pointer;
+}
+.item-size:not(:last-child){
+    margin-right: 6px;
+}
+

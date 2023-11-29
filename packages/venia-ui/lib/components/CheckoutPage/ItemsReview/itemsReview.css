@@ -1,0 +1,16 @@
+.items_review_container {
+    min-height: 2rem;
+    background-color: #f7f7f7;
+}
+
+.items_container {
+    display: grid;
+    padding: 1.5rem 2rem;
+}
+
+.total_quantity {
+}
+
+.total_quantity_amount {
+    font-weight: var(--venia-global-fontWeight-semibold);
+}

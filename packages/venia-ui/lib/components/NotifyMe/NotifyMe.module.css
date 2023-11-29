@@ -1,0 +1,26 @@
+:global(.modal-scroll) {
+    overflow: hidden !important;
+}
+
+:global(button.modal-button) {
+    text-transform: capitalize;
+    color: white;
+    background-color: #21b259;
+    padding: 0.1rem 1.2rem;
+    border-radius: 2px;
+    font-weight: 400;
+}
+
+:global(.signed-in-notify-button-container) {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+:global(button.notify-button) {
+    color: white;
+    background-color: #21b259;
+    padding: 0.1rem 1.5rem;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 17px;
+}

@@ -1,0 +1,88 @@
+:global(.category-grid) {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: calc(((100vw - 100%) / 2 * (-1) - 8px));
+    width: 100vw;
+    overflow: hidden;
+}
+:global(.left-side) {
+    width: 50%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+}
+:global(.left-side img) {
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+:global(.right-side img) {
+    width: 100%;
+    margin: 0;
+    height: 100%;
+}
+:global(.panel-block) {
+    width: 100%;
+}
+:global(.left-side) {
+    width: 50%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+:global(.right-side) {
+    width: 50%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+}
+:global(.right-side .panel-block) {
+    width: calc(100%/2 - 5px);
+    float: left;
+}
+:global(.right-side .panel-block:first-child) {
+    margin-right: 10px;
+}
+:global(.right-side .panel-block-last) {
+    width: 100%;
+    float: left;
+    margin-top: 10px;
+    padding-top: 6px;
+}
+
+:global(.right-side .panel-block-last img) {
+ margin: 0 auto;
+}
+@media screen and (max-width: 767px){
+
+    :global(.cms-promotional .jsx-parser > .main-container){
+        padding: 0 0;
+    }
+    :global(.category-grid){
+        width: 100%;
+        margin-left: 0;
+    }
+    :global(.left-side) {
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    :global(.right-side){
+        width: 100%;
+        margin-top: 20px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    :global(.right-side .panel-block) {
+        width: 100%;
+    }
+    :global(.right-side .panel-block:first-child) {
+        margin: 0 0 15px 0;
+    }
+
+}
+

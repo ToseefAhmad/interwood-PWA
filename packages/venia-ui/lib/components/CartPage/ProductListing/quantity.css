@@ -1,0 +1,78 @@
+.root {
+    float: left;
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label:not(:focus):not(:active) {
+    position: absolute;
+    overflow: hidden;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    white-space: nowrap;
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background: #21b259;
+    border: 1px solid #21b259;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 56px;
+    color: #fff;
+    font-size: 20px;
+}
+.button svg {
+    stroke: #ffffff;
+}
+
+.button:disabled,
+.button:disabled:hover {
+    --stroke: rgb(var(--venia-global-color-gray-400));
+    border-color: rgb(var(--venia-global-color-gray-400));
+}
+
+.button:disabled {
+    cursor: not-allowed;
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button_decrement {
+    composes: button;
+    margin-right: 8px;
+}
+
+.button_increment {
+    composes: button;
+    margin-left: 8px;
+}
+
+.input {
+    height: 50px;
+    font-size: 18px;
+    font-weight: 400;
+    width: 112px !important;
+    max-width: inherit;
+    padding: 4px 0 0;
+    flex: inherit;
+    font-family: 'Poppins', sans-serif;
+    line-height: 58px;
+    margin: 0 1px;
+    text-align: center;
+    border: 1px solid #21b259;
+}
+.input:focus {
+    border: 1px solid #21b259;
+    outline: unset;
+}

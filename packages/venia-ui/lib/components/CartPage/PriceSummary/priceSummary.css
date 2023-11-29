@@ -1,0 +1,221 @@
+.root {
+}
+
+.errorText {
+    color: rgb(var(--venia-global-color-error));
+    line-height: var(--venia-global-lineHeight-300);
+}
+
+.lineItems {
+    display: grid;
+    grid-gap: 0.75rem;
+    grid-template-columns: 1fr auto;
+    line-height: 1.5rem;
+}
+
+.lineItemLabel {
+    justify-self: start;
+}
+
+.price {
+    justify-self: end;
+}
+
+.totalLabel {
+    composes: lineItemLabel;
+    font-weight: var(--venia-global-fontWeight-semibold);
+}
+
+.totalPrice {
+    composes: price;
+    font-weight: var(--venia-global-fontWeight-semibold);
+}
+
+.priceUpdating {
+    composes: price;
+    opacity: 0;
+}
+
+.checkoutButton_container {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 1rem;
+    min-height: 5.5rem;
+    width: 100%;
+}
+
+/* ============================
+           Summary CSS
+   ============================ */
+
+.cart-summary {
+    width: 30%;
+    float: right;
+    margin-top: -38px;
+
+}
+.cart-summary h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    padding-left: 20px;
+    margin-bottom: 8px;
+}
+.summary-content {
+    border: 1px solid #a0a0a0;
+
+}
+.estimate {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    background-color: #f6f6f6;
+    padding: 20px 14px;
+    position: relative;
+}
+
+.tax, .subtotal, .ordertotal{
+    padding: 10px 14px 10px 14px;
+    font-family: 'Poppins', sans-serif;
+}
+.divider{
+    border-bottom: 2px solid #f6f6f6;
+}
+.tax {
+    background-color: #f6f6f6;
+}
+.tax span, .subtotal span,.ordertotal span{
+    float: right;
+    font-family: 'Poppins', sans-serif;
+}
+.price-inner-container > span {
+    float: none !important;
+}
+.discount-title{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 0;
+}
+.discount .control input{
+    padding: 14px;
+    border: 1px solid #a0a0a0;
+    width: 70%;
+    outline: unset;
+}
+.discount .control button{
+    padding: 14px 20px;
+    border: 1px solid #000;
+    background-color: #000;
+    color: #fff;
+    font-size: 15px;
+    width: 30%;
+    height: 46px;
+    padding-top: 10px;
+    font-weight: 500;
+    outline: unset;
+}
+.checkout-btn {
+    background-color: #f43434;
+    color: #fff;
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #f43434;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-size: 18px;
+    font-weight: 500;
+    outline: unset;
+}
+.checkout-btn[disabled] {
+    background-color: #d2d2d2;
+    border-color: #d2d2d2;
+}
+
+.estimate:before {
+    content: '\e81c';
+    font-family: 'porto';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+}
+
+.discount-title:before {
+    content: '\e81c';
+    font-family: 'porto';
+    position: absolute;
+    right: 110px;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-top: 0;
+}
+.discount-title{
+    position: relative;
+}
+
+@media only screen and (max-width: 767px) {
+    .cart-summary {
+        width: 100% !important;
+    }
+    .cart-summary h2 {
+        font-size: 25px;
+        padding-left: 10px;
+        padding-bottom: 8px;
+    }
+    .estimate {
+        font-size: 17px;
+    }
+    .discount-title {
+        font-size: 17px;
+        padding: 22px 14px 10px 10px;
+    }
+    .discount-title:before{
+        right: 48px;
+    }
+
+    .discount .control input {
+        padding: 14px;
+        border: 1px solid #a0a0a0;
+        width: 70%;
+    }
+    .checkout-btn {
+        background-color: #f43434;
+        color: #fff;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #f43434;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 28px;
+        display: inline-block;
+    }
+    .cart-summary {
+        margin-top: 20px;
+    }
+    .cart-summary {
+        order: 1;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .cart-summary {
+        width: 100% !important;
+    }
+
+}
+
+:global(.minimum-order){
+    color: red;
+}
+
+.total{
+    font-weight: bold;
+    border-top: dotted;
+}
